@@ -58,76 +58,32 @@
     flex-wrap: wrap;
   }
   .brand-left { display: flex; align-items: center; gap: 24px; }
-  .brand-logo {
-    height: 48px; width: auto;
-    display: block;
-  }
-  .brand-divider {
-    width: 1px; height: 40px;
-    background: var(--grey);
-  }
-  .brand-title {
-    font-size: 13px;
-    color: var(--charcoal);
-    line-height: 1.3;
-  }
-  .brand-title .doc-name {
-    font-weight: 700;
-    color: var(--black);
-    font-size: 15px;
-    margin-bottom: 2px;
-  }
-  .brand-title .doc-subtitle {
-    font-size: 12px;
-    color: var(--charcoal);
-    letter-spacing: 0.02em;
-  }
-
-  .brand-right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+  .brand-logo { height: 48px; width: auto; display: block; }
+  .brand-divider { width: 1px; height: 40px; background: var(--grey); }
+  .brand-title { font-size: 13px; color: var(--charcoal); line-height: 1.3; }
+  .brand-title .doc-name { font-weight: 700; color: var(--black); font-size: 15px; margin-bottom: 2px; }
+  .brand-title .doc-subtitle { font-size: 12px; color: var(--charcoal); letter-spacing: 0.02em; }
+  .brand-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 
   /* ============ PAGE BODY ============ */
   .page-body { padding: 24px 40px; }
-
   .page-title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 20px; padding-bottom: 12px;
     border-bottom: 1px solid var(--grey-light);
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-wrap: wrap; gap: 12px;
   }
-  h1.page-title {
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    color: var(--black);
-    letter-spacing: -0.01em;
-  }
-  .page-meta {
-    font-size: 12px;
-    color: var(--charcoal);
-  }
+  h1.page-title { font-family: Arial, sans-serif; font-weight: 700; font-size: 24px; color: var(--black); letter-spacing: -0.01em; }
+  .page-meta { font-size: 12px; color: var(--charcoal); }
 
   /* ============ STATUS PILL ============ */
   .status-pill {
     display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12px; font-weight: 600;
-    color: var(--charcoal);
+    font-size: 12px; font-weight: 600; color: var(--charcoal);
     padding: 7px 12px; border-radius: 4px;
-    background: var(--white);
-    border: 1px solid var(--grey);
+    background: var(--white); border: 1px solid var(--grey);
   }
-  .status-pill::before {
-    content: ''; width: 8px; height: 8px; border-radius: 50%;
-    background: var(--grey); display: inline-block;
-  }
+  .status-pill::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--grey); display: inline-block; }
   .status-pill.online { border-color: var(--green); color: var(--green); }
   .status-pill.online::before { background: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
   .status-pill.offline { border-color: var(--red); color: var(--red); }
@@ -138,149 +94,74 @@
 
   /* ============ BUTTONS ============ */
   .btn {
-    font-family: Arial, sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    padding: 8px 14px;
-    border-radius: 4px;
-    border: 1px solid var(--grey);
-    background: var(--white);
-    color: var(--black);
-    cursor: pointer;
-    transition: all 0.15s ease;
-    display: inline-flex; align-items: center; gap: 6px;
-    white-space: nowrap;
-    line-height: 1.2;
+    font-family: Arial, sans-serif; font-weight: 600; font-size: 13px;
+    padding: 8px 14px; border-radius: 4px; border: 1px solid var(--grey);
+    background: var(--white); color: var(--black); cursor: pointer;
+    transition: all 0.15s ease; display: inline-flex; align-items: center; gap: 6px;
+    white-space: nowrap; line-height: 1.2;
   }
   .btn:hover { background: var(--grey-light); border-color: var(--charcoal); }
-  .btn-primary {
-    background: var(--amber); border-color: var(--amber);
-    color: var(--black); font-weight: 700;
-  }
+  .btn-primary { background: var(--amber); border-color: var(--amber); color: var(--black); font-weight: 700; }
   .btn-primary:hover { background: var(--amber-dark); border-color: var(--amber-dark); color: var(--black); }
   .btn-danger { color: var(--red); border-color: var(--red); font-weight: 600; }
   .btn-danger:hover { background: var(--red-soft); }
   .btn-sm { padding: 5px 10px; font-size: 12px; }
 
   /* ============ KPI CARDS ============ */
-  .kpis {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 12px;
-    margin-bottom: 24px;
-  }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 24px; }
   .kpi {
-    background: var(--white);
-    border: 1px solid var(--grey-light);
-    border-top: 3px solid var(--amber);
-    border-radius: 4px;
-    padding: 16px 18px;
-    transition: all 0.15s ease;
+    background: var(--white); border: 1px solid var(--grey-light);
+    border-top: 3px solid var(--amber); border-radius: 4px;
+    padding: 16px 18px; transition: all 0.15s ease;
   }
   .kpi:hover { border-color: var(--amber); box-shadow: var(--shadow-sm); }
-  .kpi:hover { border-top-color: var(--amber); }
-  .kpi-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    margin-bottom: 8px;
-  }
-  .kpi-value {
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.1;
-    color: var(--black);
-    letter-spacing: -0.01em;
-  }
-  .kpi-value .unit {
-    font-size: 14px; font-weight: 500; color: var(--charcoal);
-  }
-  .kpi-sub {
-    font-size: 12px; color: var(--charcoal); margin-top: 6px;
-  }
+  .kpi-label { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 8px; }
+  .kpi-value { font-family: Arial, sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1; color: var(--black); letter-spacing: -0.01em; }
+  .kpi-value .unit { font-size: 14px; font-weight: 500; color: var(--charcoal); }
+  .kpi-sub { font-size: 12px; color: var(--charcoal); margin-top: 6px; }
+  .kpi-filter-note { font-size: 10px; color: var(--amber-dark); font-weight: 600; font-style: italic; margin-top: 2px; }
 
   /* ============ FILTER TOOLBAR ============ */
   .toolbar {
     display: flex; gap: 10px; align-items: center;
     margin-bottom: 16px; flex-wrap: wrap;
-    padding: 12px 16px;
-    background: var(--grey-lighter);
-    border: 1px solid var(--grey-light);
-    border-radius: 4px;
+    padding: 12px 16px; background: var(--grey-lighter);
+    border: 1px solid var(--grey-light); border-radius: 4px;
   }
-  .toolbar label {
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.05em; text-transform: uppercase;
-    color: var(--charcoal); margin-right: 2px;
-  }
+  .toolbar label { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--charcoal); margin-right: 2px; }
   .toolbar select, .toolbar input[type=text] {
     font-family: Arial, sans-serif; font-size: 13px;
     padding: 6px 10px; border: 1px solid var(--grey);
-    border-radius: 4px; background: var(--white);
-    outline: none; color: var(--black);
+    border-radius: 4px; background: var(--white); outline: none; color: var(--black);
   }
-  .toolbar select:focus, .toolbar input:focus {
-    border-color: var(--amber);
-    box-shadow: 0 0 0 2px var(--amber-tint);
-  }
+  .toolbar select:focus, .toolbar input:focus { border-color: var(--amber); box-shadow: 0 0 0 2px var(--amber-tint); }
   .search-input { min-width: 220px; }
 
   /* ============ TABLE ============ */
-  .table-wrap {
-    background: var(--white);
-    border: 1px solid var(--grey);
-    border-radius: 4px;
-    overflow: auto;
-  }
+  .table-wrap { background: var(--white); border: 1px solid var(--grey); border-radius: 4px; overflow: auto; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 900px; }
   thead th {
-    background: var(--amber);
-    color: var(--black);
-    font-weight: 700;
-    text-align: left;
-    padding: 11px 14px;
-    font-size: 12px;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-    position: sticky; top: 0;
-    cursor: pointer;
-    user-select: none;
+    background: var(--amber); color: var(--black); font-weight: 700;
+    text-align: left; padding: 11px 14px; font-size: 12px;
+    letter-spacing: 0.02em; white-space: nowrap;
+    position: sticky; top: 0; cursor: pointer; user-select: none;
     border-bottom: 1px solid var(--amber-dark);
   }
   thead th:hover { background: var(--amber-dark); }
-  thead th .sort-arrow {
-    display: inline-block; margin-left: 4px;
-    font-size: 10px; opacity: 0.5;
-  }
+  thead th .sort-arrow { display: inline-block; margin-left: 4px; font-size: 10px; opacity: 0.5; }
   thead th.sorted .sort-arrow { opacity: 1; }
-  tbody td {
-    padding: 11px 14px;
-    border-top: 1px solid var(--grey-light);
-    vertical-align: middle;
-    color: var(--black);
-  }
-  /* Alternating rows per Degelman brand */
+  tbody td { padding: 11px 14px; border-top: 1px solid var(--grey-light); vertical-align: middle; color: var(--black); }
   tbody tr:nth-child(odd) { background: var(--white); }
   tbody tr:nth-child(even) { background: var(--grey-light); }
   tbody tr:hover { background: var(--amber-tint); }
   tbody tr.expanded { background: var(--amber-tint) !important; }
 
-  .project-name {
-    font-weight: 700; color: var(--black);
-    cursor: pointer;
-    text-decoration: none;
-  }
+  .project-name { font-weight: 700; color: var(--black); cursor: pointer; text-decoration: none; }
   .project-name:hover { color: var(--amber-dark); text-decoration: underline; }
 
   .status-badge {
-    display: inline-block;
-    padding: 3px 9px; border-radius: 3px;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.02em;
-    border: 1px solid;
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.02em; border: 1px solid;
   }
   .status-Planning { background: var(--white); color: var(--charcoal); border-color: var(--grey); }
   .status-In-Progress { background: var(--amber-tint); color: var(--amber-dark); border-color: var(--amber); }
@@ -288,7 +169,6 @@
   .status-On-Hold { background: #F5ECD8; color: #8A6914; border-color: #D4B656; }
   .status-Cancelled { background: var(--red-soft); color: var(--red); border-color: var(--red); }
 
-  /* Priority - per brand: Deep Red for High (emphasis text only) */
   .priority-High { color: var(--red); font-weight: 700; }
   .priority-Medium { color: var(--amber-dark); font-weight: 600; }
   .priority-Low { color: var(--charcoal); }
@@ -296,232 +176,78 @@
   .roi-value { font-weight: 600; }
   .roi-positive { color: var(--green); }
   .roi-zero { color: var(--charcoal); }
+  .roi-negative { color: var(--red); }
 
   .row-actions { display: flex; gap: 6px; justify-content: flex-end; }
 
-  .empty-state {
-    padding: 60px 20px;
-    text-align: center;
-    color: var(--charcoal);
-  }
-  .empty-state h3 {
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: var(--black);
-  }
+  .empty-state { padding: 60px 20px; text-align: center; color: var(--charcoal); }
+  .empty-state h3 { font-weight: 700; font-size: 18px; margin-bottom: 8px; color: var(--black); }
   .empty-state p { margin-bottom: 20px; font-size: 14px; }
 
   /* ============ EXPANDED ROW DETAIL ============ */
-  .detail-row td {
-    padding: 0 !important;
-    background: var(--amber-tint) !important;
-    border-top: 2px solid var(--amber) !important;
-  }
-  .detail-content {
-    padding: 20px 24px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
-  }
-  .detail-block h4 {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    margin-bottom: 8px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid var(--amber);
-  }
+  .detail-row td { padding: 0 !important; background: var(--amber-tint) !important; border-top: 2px solid var(--amber) !important; }
+  .detail-content { padding: 20px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .detail-block h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid var(--amber); }
   .detail-block p, .detail-block ul { font-size: 13px; color: var(--black); }
   .detail-block ul { list-style: none; padding-left: 0; }
-  .detail-block li {
-    padding: 4px 0 4px 18px; position: relative;
-  }
-  .detail-block li::before {
-    content: '▸'; color: var(--amber); position: absolute; left: 0; font-weight: 700;
-  }
-  .detail-metrics {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 6px 16px;
-    font-size: 13px;
-  }
+  .detail-block li { padding: 4px 0 4px 18px; position: relative; }
+  .detail-block li::before { content: '▸'; color: var(--amber); position: absolute; left: 0; font-weight: 700; }
+  .detail-metrics { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; font-size: 13px; }
   .detail-metrics dt { color: var(--charcoal); }
   .detail-metrics dd { text-align: right; font-weight: 600; }
   .tag-pill {
-    display: inline-block;
-    background: var(--white);
-    border: 1px solid var(--grey);
-    color: var(--charcoal);
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 3px;
-    margin-right: 4px;
-    margin-top: 4px;
-    font-weight: 500;
+    display: inline-block; background: var(--white); border: 1px solid var(--grey);
+    color: var(--charcoal); font-size: 11px; padding: 2px 8px; border-radius: 3px;
+    margin-right: 4px; margin-top: 4px; font-weight: 500;
   }
 
   /* ============ MODAL ============ */
   .modal-overlay {
-    display: none;
-    position: fixed; inset: 0;
-    background: rgba(0,0,0,0.45);
-    z-index: 100;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
-    overflow-y: auto;
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.45); z-index: 100;
+    justify-content: center; align-items: flex-start;
+    padding: 40px 20px; overflow-y: auto;
   }
   .modal-overlay.active { display: flex; }
-  .modal {
-    background: var(--white);
-    border-radius: 4px;
-    width: 100%; max-width: 780px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--grey);
-    overflow: hidden;
-  }
-  .modal-header {
-    padding: 16px 24px;
-    background: var(--amber);
-    border-bottom: 1px solid var(--amber-dark);
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .modal-header h2 {
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--black);
-  }
-  .modal-close {
-    background: transparent; border: none;
-    font-size: 22px; line-height: 1;
-    cursor: pointer; color: var(--black);
-    padding: 4px 10px; border-radius: 3px;
-    font-weight: 700;
-  }
+  .modal { background: var(--white); border-radius: 4px; width: 100%; max-width: 780px; box-shadow: var(--shadow-lg); border: 1px solid var(--grey); overflow: hidden; }
+  .modal-header { padding: 16px 24px; background: var(--amber); border-bottom: 1px solid var(--amber-dark); display: flex; justify-content: space-between; align-items: center; }
+  .modal-header h2 { font-weight: 700; font-size: 18px; color: var(--black); }
+  .modal-close { background: transparent; border: none; font-size: 22px; line-height: 1; cursor: pointer; color: var(--black); padding: 4px 10px; border-radius: 3px; font-weight: 700; }
   .modal-close:hover { background: rgba(0,0,0,0.1); }
   .modal-body { padding: 20px 24px; }
-  .modal-footer {
-    padding: 14px 24px;
-    border-top: 1px solid var(--grey-light);
-    background: var(--grey-lighter);
-    display: flex; justify-content: space-between; gap: 10px;
-  }
+  .modal-footer { padding: 14px 24px; border-top: 1px solid var(--grey-light); background: var(--grey-lighter); display: flex; justify-content: space-between; gap: 10px; }
   .modal-footer .spacer { flex: 1; }
 
   /* ============ FORM ============ */
-  .form-section {
-    margin-bottom: 22px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--grey-light);
-  }
+  .form-section { margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid var(--grey-light); }
   .form-section:last-child { border-bottom: none; margin-bottom: 0; }
-  .form-section-title {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--black);
-    margin-bottom: 12px;
-    padding: 4px 10px;
-    background: var(--amber);
-    display: inline-block;
-    border-radius: 3px;
-  }
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
+  .form-section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--black); margin-bottom: 12px; padding: 4px 10px; background: var(--amber); display: inline-block; border-radius: 3px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .form-grid .full { grid-column: 1 / -1; }
-  .form-field label {
-    display: block;
-    font-size: 11px; font-weight: 700;
-    color: var(--charcoal); margin-bottom: 4px;
-    letter-spacing: 0.02em;
-  }
+  .form-field label { display: block; font-size: 11px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; letter-spacing: 0.02em; }
   .form-field label .req { color: var(--red); margin-left: 2px; }
   .form-field input, .form-field select, .form-field textarea {
-    width: 100%;
-    font-family: Arial, sans-serif; font-size: 13px;
-    padding: 7px 10px;
-    border: 1px solid var(--grey);
-    border-radius: 3px;
-    background: var(--white);
-    color: var(--black);
-    outline: none;
-    transition: border-color 0.15s;
+    width: 100%; font-family: Arial, sans-serif; font-size: 13px;
+    padding: 7px 10px; border: 1px solid var(--grey); border-radius: 3px;
+    background: var(--white); color: var(--black); outline: none; transition: border-color 0.15s;
   }
-  .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
-    border-color: var(--amber);
-    box-shadow: 0 0 0 2px var(--amber-tint);
-  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--amber); box-shadow: 0 0 0 2px var(--amber-tint); }
   .form-field textarea { resize: vertical; min-height: 60px; }
-  .form-field .hint {
-    font-size: 11px; color: var(--charcoal); margin-top: 3px;
-  }
+  .form-field .hint { font-size: 11px; color: var(--charcoal); margin-top: 3px; line-height: 1.4; }
+  .form-field .hint strong { color: var(--black); }
 
-  .computed-box {
-    background: var(--grey-light);
-    border-left: 3px solid var(--amber);
-    border-radius: 3px;
-    padding: 12px 14px;
-    margin-top: 12px;
-  }
-  .computed-box h4 {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    color: var(--charcoal);
-  }
-  .computed-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-  }
-  .computed-item {
-    text-align: center;
-    background: var(--white);
-    padding: 8px 6px;
-    border-radius: 3px;
-    border: 1px solid var(--grey-light);
-  }
-  .computed-item .val {
-    font-weight: 700;
-    font-size: 18px; color: var(--black);
-  }
-  .computed-item .lbl {
-    font-size: 10px; color: var(--charcoal);
-    text-transform: uppercase; letter-spacing: 0.04em;
-    margin-top: 2px; font-weight: 600;
-  }
+  .computed-box { background: var(--grey-light); border-left: 3px solid var(--amber); border-radius: 3px; padding: 12px 14px; margin-top: 12px; }
+  .computed-box h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; color: var(--charcoal); }
+  .computed-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .computed-item { text-align: center; background: var(--white); padding: 8px 6px; border-radius: 3px; border: 1px solid var(--grey-light); }
+  .computed-item .val { font-weight: 700; font-size: 18px; color: var(--black); }
+  .computed-item .lbl { font-size: 10px; color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; font-weight: 600; }
 
-  /* ============ BANNER BOX (Degelman info banner pattern) ============ */
-  .banner-box {
-    background: var(--amber);
-    color: var(--black);
-    padding: 14px 18px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-    font-size: 13px;
-    line-height: 1.5;
-  }
+  /* ============ BANNER BOX ============ */
+  .banner-box { background: var(--amber); color: var(--black); padding: 14px 18px; border-radius: 3px; margin-bottom: 20px; font-size: 13px; line-height: 1.5; }
   .banner-box strong { font-weight: 700; }
-  .banner-box .alert-label {
-    color: var(--red); font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.05em;
-    font-size: 12px;
-  }
-  .banner-box code {
-    background: var(--white);
-    padding: 1px 6px;
-    border-radius: 2px;
-    font-family: Consolas, 'Courier New', monospace;
-    font-size: 12px;
-    color: var(--black);
-  }
+  .banner-box .alert-label { color: var(--red); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; }
+  .banner-box code { background: var(--white); padding: 1px 6px; border-radius: 2px; font-family: Consolas, 'Courier New', monospace; font-size: 12px; color: var(--black); }
 
   /* ============ TOAST ============ */
   .toast {
@@ -529,131 +255,66 @@
     background: var(--black); color: var(--white);
     padding: 12px 18px; border-radius: 3px;
     font-size: 13px; font-weight: 600;
-    box-shadow: var(--shadow-lg);
-    z-index: 200;
+    box-shadow: var(--shadow-lg); z-index: 200;
     opacity: 0; transform: translateY(10px);
-    transition: all 0.25s ease;
-    pointer-events: none;
+    transition: all 0.25s ease; pointer-events: none;
     border-left: 4px solid var(--amber);
+    max-width: 340px;
   }
-  .toast.show { opacity: 1; transform: translateY(0); }
+  .toast.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
   .toast.error { background: var(--red); border-left-color: var(--white); }
   .toast.success { background: var(--green); border-left-color: var(--white); }
 
   /* ============ TIME LOG ============ */
-  .btn-time {
-    background: var(--white);
-    border: 1px solid var(--amber);
-    color: var(--amber-dark);
-    font-weight: 700;
-    font-size: 12px;
-    padding: 5px 10px;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .btn-time:hover {
-    background: var(--amber-tint);
-    border-color: var(--amber-dark);
-    color: var(--amber-dark);
-  }
-  .btn-time.has-entries {
-    background: var(--amber);
-    color: var(--black);
-    border-color: var(--amber);
-  }
-  .btn-time.has-entries:hover {
-    background: var(--amber-dark);
-    border-color: var(--amber-dark);
-    color: var(--black);
-  }
+  .btn-time { background: var(--white); border: 1px solid var(--amber); color: var(--amber-dark); font-weight: 700; font-size: 12px; padding: 5px 10px; display: inline-flex; align-items: center; gap: 4px; }
+  .btn-time:hover { background: var(--amber-tint); border-color: var(--amber-dark); color: var(--amber-dark); }
+  .btn-time.has-entries { background: var(--amber); color: var(--black); border-color: var(--amber); }
+  .btn-time.has-entries:hover { background: var(--amber-dark); border-color: var(--amber-dark); color: var(--black); }
   .time-cell { white-space: nowrap; font-weight: 600; }
   .time-cell .hrs { color: var(--charcoal); font-weight: 500; font-size: 12px; margin-left: 4px; }
 
-  .time-summary {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 18px;
-    padding: 12px 14px;
-    background: var(--grey-light);
-    border-left: 3px solid var(--amber);
-    border-radius: 3px;
-  }
+  .time-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; padding: 12px 14px; background: var(--grey-light); border-left: 3px solid var(--amber); border-radius: 3px; }
   .time-summary .item { text-align: center; padding: 4px 0; }
-  .time-summary .item .val {
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--black);
-    line-height: 1.1;
-  }
-  .time-summary .item .lbl {
-    font-size: 10px;
-    color: var(--charcoal);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-top: 4px;
-    font-weight: 600;
-  }
+  .time-summary .item .val { font-weight: 700; font-size: 18px; color: var(--black); line-height: 1.1; }
+  .time-summary .item .lbl { font-size: 10px; color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 4px; font-weight: 600; }
 
-  .time-entries-wrap {
-    border: 1px solid var(--grey);
-    border-radius: 3px;
-    max-height: 320px;
-    overflow-y: auto;
-    background: var(--white);
-  }
+  .time-entries-wrap { border: 1px solid var(--grey); border-radius: 3px; max-height: 320px; overflow-y: auto; background: var(--white); }
   .time-entries-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .time-entries-table thead th {
-    background: var(--amber);
-    color: var(--black);
-    font-weight: 700;
-    font-size: 11px;
-    text-align: left;
-    padding: 8px 12px;
-    letter-spacing: 0.03em;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-  }
-  .time-entries-table tbody td {
-    padding: 8px 12px;
-    border-top: 1px solid var(--grey-light);
-    vertical-align: middle;
-  }
+  .time-entries-table thead th { background: var(--amber); color: var(--black); font-weight: 700; font-size: 11px; text-align: left; padding: 8px 12px; letter-spacing: 0.03em; position: sticky; top: 0; z-index: 2; }
+  .time-entries-table tbody td { padding: 8px 12px; border-top: 1px solid var(--grey-light); vertical-align: middle; }
   .time-entries-table tbody tr:nth-child(odd) { background: var(--white); }
   .time-entries-table tbody tr:nth-child(even) { background: var(--grey-lighter); }
   .time-entries-table tbody tr:hover { background: var(--amber-tint); }
+  .time-entries-table tbody tr.editing { background: var(--amber-tint) !important; box-shadow: inset 3px 0 0 var(--amber); }
   .time-entries-table .hours-col { text-align: right; font-weight: 600; }
-  .time-entries-table .delete-btn {
-    background: transparent;
-    border: none;
-    color: var(--red);
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 3px;
-    opacity: 0.4;
-    transition: opacity 0.15s;
-  }
-  .time-entries-table tr:hover .delete-btn { opacity: 1; }
-  .time-entries-table .delete-btn:hover { background: var(--red-soft); }
+  .time-entries-table .edit-input { width: 100%; font-family: Arial, sans-serif; font-size: 13px; padding: 4px 6px; border: 1px solid var(--amber); border-radius: 3px; background: var(--white); color: var(--black); outline: none; }
+  .time-entries-table .edit-input:focus { box-shadow: 0 0 0 2px var(--amber-tint); }
+  .time-entries-table .edit-input.hours-input { text-align: right; font-weight: 600; }
 
-  .time-empty {
-    padding: 30px 20px;
-    text-align: center;
-    color: var(--charcoal);
-    font-size: 13px;
-  }
+  .time-row-actions { display: flex; gap: 4px; justify-content: flex-end; align-items: center; }
+  .time-icon-btn { background: transparent; border: 1px solid transparent; cursor: pointer; font-size: 14px; font-weight: 700; padding: 3px 7px; border-radius: 3px; line-height: 1; transition: all 0.15s; color: var(--charcoal); }
+  .time-icon-btn:hover { background: var(--white); border-color: var(--grey); }
+  .time-icon-btn.edit-btn { color: var(--amber-dark); opacity: 0.5; }
+  .time-icon-btn.delete-btn { color: var(--red); opacity: 0.4; }
+  .time-entries-table tr:hover .time-icon-btn { opacity: 1; }
+  .time-icon-btn.edit-btn:hover { background: var(--amber-tint); border-color: var(--amber); color: var(--amber-dark); }
+  .time-icon-btn.delete-btn:hover { background: var(--red-soft); border-color: var(--red); }
+  .time-icon-btn.save-btn { color: var(--white); background: var(--green); border-color: var(--green); opacity: 1; font-size: 12px; padding: 4px 10px; }
+  .time-icon-btn.save-btn:hover { background: #166b43; border-color: #166b43; color: var(--white); }
+  .time-icon-btn.cancel-btn { color: var(--charcoal); background: var(--white); border-color: var(--grey); opacity: 1; font-size: 12px; padding: 4px 10px; }
+  .time-icon-btn.cancel-btn:hover { background: var(--grey-light); border-color: var(--charcoal); }
+  .time-empty { padding: 30px 20px; text-align: center; color: var(--charcoal); font-size: 13px; }
+
+  /* Pending delete row */
+  .pending-delete { opacity: 0.35; transition: opacity 0.3s; }
+
 
   /* ============ SUBSCRIPTIONS ============ */
   .kpi-subs {
     border-top-color: var(--amber-dark);
+    cursor: pointer;
   }
-  .kpi-subs:hover {
-    background: var(--amber-tint);
-  }
+  .kpi-subs:hover { background: var(--amber-tint); }
   .modal-wide { max-width: 920px; }
 
   .subs-summary {
@@ -667,186 +328,48 @@
     border-radius: 3px;
   }
   .subs-summary .item { text-align: center; padding: 4px 0; }
-  .subs-summary .item .val {
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--black);
-    line-height: 1.1;
-  }
-  .subs-summary .item .lbl {
-    font-size: 10px;
-    color: var(--charcoal);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-top: 4px;
-    font-weight: 600;
-  }
+  .subs-summary .item .val { font-weight: 700; font-size: 18px; color: var(--black); line-height: 1.1; }
+  .subs-summary .item .lbl { font-size: 10px; color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 4px; font-weight: 600; }
 
-  .platform-card {
-    border: 1px solid var(--grey);
-    border-radius: 4px;
-    margin-bottom: 12px;
-    overflow: hidden;
-    background: var(--white);
-  }
-  .platform-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    background: var(--amber);
-    cursor: pointer;
-    user-select: none;
-    border-bottom: 1px solid var(--amber-dark);
-  }
+  .platform-card { border: 1px solid var(--grey); border-radius: 4px; margin-bottom: 12px; overflow: hidden; background: var(--white); }
+  .platform-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--amber); cursor: pointer; user-select: none; border-bottom: 1px solid var(--amber-dark); }
   .platform-header:hover { background: var(--amber-dark); }
-  .platform-header .platform-name {
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--black);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .platform-header .platform-meta {
-    font-size: 12px;
-    color: var(--charcoal);
-    font-weight: 600;
-  }
-  .platform-header .expand-arrow {
-    display: inline-block;
-    margin-right: 8px;
-    transition: transform 0.2s;
-    font-size: 11px;
-  }
-  .platform-card.expanded .expand-arrow {
-    transform: rotate(90deg);
-  }
-  .platform-seats {
-    display: none;
-  }
-  .platform-card.expanded .platform-seats {
-    display: block;
-  }
-  .seat-row {
-    display: grid;
-    grid-template-columns: 1.4fr 0.9fr 1fr 0.9fr 0.8fr auto;
-    gap: 10px;
-    align-items: center;
-    padding: 10px 16px;
-    border-top: 1px solid var(--grey-light);
-    font-size: 13px;
-  }
+  .platform-header .platform-name { font-weight: 700; font-size: 14px; color: var(--black); display: flex; align-items: center; gap: 10px; }
+  .platform-header .platform-meta { font-size: 12px; color: var(--charcoal); font-weight: 600; }
+  .platform-header .expand-arrow { display: inline-block; margin-right: 8px; transition: transform 0.2s; font-size: 11px; }
+  .platform-card.expanded .expand-arrow { transform: rotate(90deg); }
+  .platform-seats { display: none; }
+  .platform-card.expanded .platform-seats { display: block; }
+
+  .seat-row { display: grid; grid-template-columns: 1.4fr 0.9fr 1fr 0.9fr 0.8fr auto; gap: 10px; align-items: center; padding: 10px 16px; border-top: 1px solid var(--grey-light); font-size: 13px; }
   .seat-row:hover { background: var(--amber-tint); }
   .seat-row .seat-person { font-weight: 600; }
   .seat-row .seat-cost { font-weight: 600; }
-  .seat-row .seat-cycle {
-    font-size: 11px;
-    color: var(--charcoal);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  .seat-row .seat-status {
-    display: inline-block;
-    padding: 2px 8px;
-    font-size: 11px;
-    font-weight: 700;
-    border-radius: 3px;
-    border: 1px solid;
-    text-align: center;
-  }
+  .seat-row .seat-cycle { font-size: 11px; color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.04em; }
+  .seat-row .seat-status { display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: 700; border-radius: 3px; border: 1px solid; text-align: center; }
   .seat-status-Active { background: var(--green-soft); color: var(--green); border-color: var(--green); }
   .seat-status-Cancelled { background: var(--red-soft); color: var(--red); border-color: var(--red); }
   .seat-status-Trial { background: var(--amber-tint); color: var(--amber-dark); border-color: var(--amber); }
 
-  .renewal-cell {
-    font-size: 12px;
-  }
-  .renewal-cell.warn {
-    color: var(--amber-dark);
-    font-weight: 700;
-  }
-  .renewal-cell.danger {
-    color: var(--red);
-    font-weight: 700;
-  }
-  .renewal-cell .badge {
-    display: inline-block;
-    padding: 1px 6px;
-    background: var(--amber);
-    color: var(--black);
-    border-radius: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    margin-left: 4px;
-    text-transform: uppercase;
-  }
-  .renewal-cell.danger .badge {
-    background: var(--red);
-    color: var(--white);
-  }
+  .renewal-cell { font-size: 12px; }
+  .renewal-cell.warn { color: var(--amber-dark); font-weight: 700; }
+  .renewal-cell.danger { color: var(--red); font-weight: 700; }
+  .renewal-cell .badge { display: inline-block; padding: 1px 6px; background: var(--amber); color: var(--black); border-radius: 2px; font-size: 10px; font-weight: 700; margin-left: 4px; text-transform: uppercase; }
+  .renewal-cell.danger .badge { background: var(--red); color: var(--white); }
 
-  .seat-actions {
-    display: flex;
-    gap: 4px;
-    justify-content: flex-end;
-  }
-  .seat-actions .icon-btn {
-    background: transparent;
-    border: 1px solid transparent;
-    color: var(--charcoal);
-    cursor: pointer;
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 3px;
-    transition: all 0.15s;
-  }
-  .seat-actions .icon-btn:hover {
-    background: var(--white);
-    border-color: var(--grey);
-  }
-  .seat-actions .icon-btn.delete:hover {
-    color: var(--red);
-    border-color: var(--red);
-    background: var(--red-soft);
-  }
+  .seat-actions { display: flex; gap: 4px; justify-content: flex-end; }
+  .seat-actions .icon-btn { background: transparent; border: 1px solid transparent; color: var(--charcoal); cursor: pointer; font-size: 12px; padding: 4px 8px; border-radius: 3px; transition: all 0.15s; }
+  .seat-actions .icon-btn:hover { background: var(--white); border-color: var(--grey); }
+  .seat-actions .icon-btn.delete:hover { color: var(--red); border-color: var(--red); background: var(--red-soft); }
 
-  .subs-empty {
-    padding: 40px 20px;
-    text-align: center;
-    color: var(--charcoal);
-    background: var(--grey-lighter);
-    border: 1px dashed var(--grey);
-    border-radius: 4px;
-  }
-  .subs-empty h3 {
-    color: var(--black);
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 6px;
-  }
+  .subs-empty { padding: 40px 20px; text-align: center; color: var(--charcoal); background: var(--grey-lighter); border: 1px dashed var(--grey); border-radius: 4px; }
+  .subs-empty h3 { color: var(--black); font-weight: 700; font-size: 16px; margin-bottom: 6px; }
 
-  /* Subscription form layout — slightly different grid */
-  .sub-form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
-  }
+  .sub-form-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
   .sub-form-grid .full { grid-column: 1 / -1; }
 
   /* ============ FOOTER ============ */
-  .brand-footer {
-    margin-top: 40px;
-    padding: 14px 40px;
-    border-top: 2px solid var(--amber);
-    font-size: 11px;
-    color: var(--charcoal);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+  .brand-footer { margin-top: 40px; padding: 14px 40px; border-top: 2px solid var(--amber); font-size: 11px; color: var(--charcoal); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
   .brand-footer .left strong { color: var(--black); }
 
   /* ============ MOBILE ============ */
@@ -872,7 +395,7 @@
       <div class="brand-divider"></div>
       <div class="brand-title">
         <div class="doc-name">AI ROI &amp; Project Tracker</div>
-        <div class="doc-subtitle">Internal · AI Team</div>
+        <div class="doc-subtitle">Internal · AI Team · v2.0</div>
       </div>
     </div>
     <div class="brand-right">
@@ -943,7 +466,7 @@
             <th data-sort="phase">Phase <span class="sort-arrow">↕</span></th>
             <th data-sort="priority">Priority <span class="sort-arrow">↕</span></th>
             <th data-sort="investment_cost">Investment <span class="sort-arrow">↕</span></th>
-            <th data-sort="annual_roi">Annual ROI <span class="sort-arrow">↕</span></th>
+            <th data-sort="annual_benefit">Annual Benefit <span class="sort-arrow">↕</span></th>
             <th data-sort="payback">Payback <span class="sort-arrow">↕</span></th>
             <th data-sort="logged_hours">Time <span class="sort-arrow">↕</span></th>
             <th style="text-align:right">Actions</th>
@@ -958,17 +481,17 @@
   <!-- BRAND FOOTER -->
   <footer class="brand-footer">
     <div class="left"><strong>Degelman Industries LTD</strong> · AI Team</div>
-    <div class="right">AI ROI &amp; Project Tracker · v1.0</div>
+    <div class="right">AI ROI &amp; Project Tracker · v2.0</div>
   </footer>
 
 </div>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modal">
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal">
     <div class="modal-header">
       <h2 id="modalTitle">New Project</h2>
-      <button class="modal-close" onclick="closeModal()">×</button>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
     </div>
     <div class="modal-body">
       <form id="projectForm" onsubmit="return false">
@@ -1054,12 +577,17 @@
             <div class="form-field">
               <label>Monthly Ongoing ($/mo)</label>
               <input type="number" id="f_monthly_cost" min="0" step="10" placeholder="0">
-              <div class="hint">Subscriptions, API costs</div>
+              <div class="hint">Subscriptions, API costs, maintenance</div>
             </div>
-            <div class="form-field full">
-              <label>Hourly Rate Used for Time-Saved Valuation ($/hr)</label>
-              <input type="number" id="f_hourly_rate" min="0" step="5" value="75">
-              <div class="hint">Fully-loaded labor rate used to convert hours saved to $</div>
+            <div class="form-field">
+              <label>Hourly Rate ($/hr)</label>
+              <input type="number" id="f_hourly_rate" min="0" step="5" value="75" oninput="updateComputed()">
+              <div class="hint">Base salary-equivalent rate for this project's team members.</div>
+            </div>
+            <div class="form-field">
+              <label>Fully-Loaded Multiplier</label>
+              <input type="number" id="f_fl_multiplier" min="1" max="3" step="0.05" value="1.30" oninput="updateComputed()">
+              <div class="hint">Accounts for benefits, overhead, taxes. <strong>Typical range: 1.25 – 1.40.</strong> Effective rate shown in Computed section.</div>
             </div>
           </div>
         </div>
@@ -1089,11 +617,15 @@
             </div>
           </div>
           <div class="computed-box">
-            <h4>Computed</h4>
+            <h4>Computed (live preview)</h4>
             <div class="computed-grid">
               <div class="computed-item">
-                <div class="val" id="c_annual_roi">$0</div>
-                <div class="lbl">Annual ROI</div>
+                <div class="val" id="c_effective_rate">$0/hr</div>
+                <div class="lbl">Effective Rate</div>
+              </div>
+              <div class="computed-item">
+                <div class="val" id="c_annual_benefit">$0</div>
+                <div class="lbl">Annual Net Benefit</div>
               </div>
               <div class="computed-item">
                 <div class="val" id="c_payback">—</div>
@@ -1102,6 +634,14 @@
               <div class="computed-item">
                 <div class="val" id="c_roi_pct">—</div>
                 <div class="lbl">ROI % (Yr 1)</div>
+              </div>
+              <div class="computed-item">
+                <div class="val" id="c_time_saved_value">$0</div>
+                <div class="lbl">Time-Saved Value/yr</div>
+              </div>
+              <div class="computed-item">
+                <div class="val" id="c_total_investment">$0</div>
+                <div class="lbl">Total Investment</div>
               </div>
             </div>
           </div>
@@ -1133,17 +673,14 @@
 </div>
 
 <!-- TIME LOG MODAL -->
-<div class="modal-overlay" id="timeModal">
+<div class="modal-overlay" id="timeModal" role="dialog" aria-modal="true" aria-labelledby="timeModalHeading">
   <div class="modal">
     <div class="modal-header">
-      <h2>Time Log — <span id="timeModalProject">Project</span></h2>
-      <button class="modal-close" onclick="closeTimeModal()">×</button>
+      <h2 id="timeModalHeading">Time Log — <span id="timeModalProject">Project</span></h2>
+      <button class="modal-close" onclick="closeTimeModal()" aria-label="Close">×</button>
     </div>
     <div class="modal-body">
-      <!-- Summary strip -->
       <div class="time-summary" id="timeSummary"></div>
-
-      <!-- Add entry form -->
       <div class="form-section" style="margin-bottom: 18px; padding-bottom: 16px;">
         <div class="form-section-title">Add Entry</div>
         <div class="form-grid" style="grid-template-columns: 1.1fr 0.9fr 2fr auto; align-items: end;">
@@ -1165,23 +702,20 @@
           </div>
         </div>
       </div>
-
-      <!-- Entries list -->
       <div class="form-section-title">Logged Entries</div>
       <div class="time-entries-wrap">
         <table class="time-entries-table" id="timeEntriesTable">
           <thead>
             <tr>
-              <th style="width:110px;">Date</th>
+              <th style="width:120px;">Date</th>
               <th style="width:80px;text-align:right;">Hours</th>
               <th>Comments</th>
-              <th style="width:60px;text-align:right;">&nbsp;</th>
+              <th style="width:110px;text-align:right;">&nbsp;</th>
             </tr>
           </thead>
           <tbody id="timeEntriesBody"></tbody>
         </table>
       </div>
-
     </div>
     <div class="modal-footer">
       <div class="spacer"></div>
@@ -1190,20 +724,16 @@
   </div>
 </div>
 
-<div id="toast" class="toast"></div>
 
 <!-- SUBSCRIPTIONS MODAL -->
-<div class="modal-overlay" id="subsModal">
+<div class="modal-overlay" id="subsModal" role="dialog" aria-modal="true" aria-labelledby="subsModalHeading">
   <div class="modal modal-wide">
     <div class="modal-header">
-      <h2>💳 AI Subscriptions &amp; Licenses</h2>
-      <button class="modal-close" onclick="closeSubsModal()">×</button>
+      <h2 id="subsModalHeading">💳 AI Subscriptions &amp; Licenses</h2>
+      <button class="modal-close" onclick="closeSubsModal()" aria-label="Close">×</button>
     </div>
     <div class="modal-body">
-      <!-- Summary strip -->
       <div class="subs-summary" id="subsSummary"></div>
-
-      <!-- Add/Edit form -->
       <div class="form-section" style="margin-bottom: 20px; padding-bottom: 18px;">
         <div class="form-section-title" id="subFormTitle">Add License</div>
         <div class="sub-form-grid">
@@ -1260,11 +790,8 @@
           </div>
         </div>
       </div>
-
-      <!-- Platform list -->
       <div class="form-section-title">Active Licenses</div>
       <div id="subsListWrap" style="margin-top: 10px;"></div>
-
     </div>
     <div class="modal-footer">
       <div class="spacer"></div>
@@ -1272,6 +799,8 @@
     </div>
   </div>
 </div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
 <script>
   // ============================================================
@@ -1290,10 +819,18 @@
   let sortDir = 1;
   let expandedId = null;
   let activeTimeProjectId = null;
+  let editingTimeEntryId = null;
   let editingSubId = null;
   let expandedPlatforms = new Set();
 
-  // ---------- Backend abstraction ----------
+  // ============================================================
+  //  FIX 3 (from audit 1): Undo-delete state for time entries
+  // ============================================================
+  const pendingDeletes = {}; // id -> { timer, entry }
+
+  // ============================================================
+  //  Backend abstraction
+  // ============================================================
   const Backend = {
     isConfigured() {
       return BACKEND_URL && BACKEND_URL !== 'PASTE_YOUR_URL_HERE' && BACKEND_URL.startsWith('http');
@@ -1332,13 +869,22 @@
       if (!data.ok) throw new Error(data.error || 'Save failed');
       return data.project;
     },
+
+    // ============================================================
+    //  FIX 2 (audit 1): remove() now cleans up orphaned time
+    //  entries in BOTH local and backend modes
+    // ============================================================
     async remove(id) {
+      // Always clean orphaned time entries from memory first
+      const orphans = timeEntries.filter(t => t.project_id === id);
+      for (const t of orphans) {
+        try { await this.removeTime(t.id); } catch(_) {}
+      }
+      timeEntries = timeEntries.filter(t => t.project_id !== id);
+
       if (!this.isConfigured()) {
         const all = JSON.parse(localStorage.getItem(LOCAL_KEY) || '[]');
         localStorage.setItem(LOCAL_KEY, JSON.stringify(all.filter(p => p.id !== id)));
-        // Also clear local time entries for this project
-        const times = JSON.parse(localStorage.getItem(LOCAL_TIME_KEY) || '[]');
-        localStorage.setItem(LOCAL_TIME_KEY, JSON.stringify(times.filter(t => t.project_id !== id)));
         return;
       }
       const res = await fetch(BACKEND_URL, {
@@ -1348,6 +894,7 @@
       const data = await res.json();
       if (!data.ok) throw new Error(data.error || 'Delete failed');
     },
+
     async upsertTime(entry) {
       if (!this.isConfigured()) {
         const all = JSON.parse(localStorage.getItem(LOCAL_TIME_KEY) || '[]');
@@ -1388,6 +935,7 @@
         sub.updated_at = now;
         if (!sub.created_at) sub.created_at = now;
         if (idx >= 0) all[idx] = sub; else all.push(sub);
+        localStorage.setItem(LOCAL_SUB_KEY, JSON.stringify(sub.id ? all : all));
         localStorage.setItem(LOCAL_SUB_KEY, JSON.stringify(all));
         return sub;
       }
@@ -1415,9 +963,11 @@
   };
 
   function normalizeProject(p) {
-    ['investment_cost','monthly_cost','hourly_rate','time_saved_hrs_week',
+    ['investment_cost','monthly_cost','hourly_rate','fl_multiplier','time_saved_hrs_week',
      'cost_savings_annual','revenue_annual','productivity_gain_pct'
     ].forEach(k => { p[k] = Number(p[k]) || 0; });
+    // Default fl_multiplier to 1.30 if not set
+    if (!p.fl_multiplier) p.fl_multiplier = 1.30;
     ['name','owner','status','phase','priority','description','start_date','target_date',
      'actual_date','quality_notes','risks','dependencies','tags','id','updated_at'
     ].forEach(k => { if (p[k] == null) p[k] = ''; else p[k] = String(p[k]); });
@@ -1427,38 +977,16 @@
   function normalizeTimeEntry(t) {
     t.hours = Number(t.hours) || 0;
     ['id','project_id','date','comments','created_at','updated_at'].forEach(k => {
-      if (t[k] == null) t[k] = '';
-      else t[k] = String(t[k]);
+      if (t[k] == null) t[k] = ''; else t[k] = String(t[k]);
     });
-    // Normalize date to YYYY-MM-DD (sheets may return Date objects as ISO strings)
     if (t.date && t.date.includes('T')) t.date = t.date.slice(0, 10);
     return t;
   }
-
-  // Get time entries for a specific project, sorted by date desc
-  function entriesForProject(projectId) {
-    return timeEntries
-      .filter(t => t.project_id === projectId)
-      .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-  }
-
-  // Total logged hours for a project
-  function totalLoggedHours(projectId) {
-    return entriesForProject(projectId).reduce((sum, t) => sum + (Number(t.hours) || 0), 0);
-  }
-
-  // Labor cost contribution from logged hours (hours × project's hourly rate)
-  function loggedLaborCost(project) {
-    const hours = totalLoggedHours(project.id);
-    return hours * (Number(project.hourly_rate) || 0);
-  }
-
   function normalizeSubscription(s) {
     s.cost = Number(s.cost) || 0;
     ['id','platform','assigned_to','billing_cycle','start_date','renewal_date',
      'status','notes','created_at','updated_at'].forEach(k => {
-      if (s[k] == null) s[k] = '';
-      else s[k] = String(s[k]);
+      if (s[k] == null) s[k] = ''; else s[k] = String(s[k]);
     });
     if (s.start_date && s.start_date.includes('T')) s.start_date = s.start_date.slice(0, 10);
     if (s.renewal_date && s.renewal_date.includes('T')) s.renewal_date = s.renewal_date.slice(0, 10);
@@ -1467,28 +995,20 @@
     return s;
   }
 
-  // Convert a subscription's cost to monthly equivalent
   function subMonthlyCost(s) {
     const cost = Number(s.cost) || 0;
-    if (s.billing_cycle === 'annual') return cost / 12;
-    return cost;
+    return s.billing_cycle === 'annual' ? cost / 12 : cost;
   }
   function subAnnualCost(s) {
     const cost = Number(s.cost) || 0;
-    if (s.billing_cycle === 'annual') return cost;
-    return cost * 12;
+    return s.billing_cycle === 'annual' ? cost : cost * 12;
   }
-
-  // Days until renewal: positive = future, negative = past due, null = no date
   function daysUntilRenewal(s) {
     if (!s.renewal_date) return null;
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    const today = new Date(); today.setHours(0,0,0,0);
     const renewal = new Date(s.renewal_date + 'T00:00:00');
     return Math.round((renewal - today) / (1000 * 60 * 60 * 24));
   }
-
-  // Group subscriptions by platform name
   function groupSubsByPlatform(subs) {
     const groups = {};
     subs.forEach(s => {
@@ -1501,41 +1021,96 @@
       seats: groups[name].sort((a, b) => (a.assigned_to || '').localeCompare(b.assigned_to || ''))
     }));
   }
-
-  // Total monthly cost across active subscriptions
   function totalSubsMonthly() {
-    return subscriptions
-      .filter(s => s.status === 'Active' || s.status === 'Trial')
+    return subscriptions.filter(s => s.status === 'Active' || s.status === 'Trial')
       .reduce((sum, s) => sum + subMonthlyCost(s), 0);
   }
   function totalSubsAnnual() {
-    return subscriptions
-      .filter(s => s.status === 'Active' || s.status === 'Trial')
+    return subscriptions.filter(s => s.status === 'Active' || s.status === 'Trial')
       .reduce((sum, s) => sum + subAnnualCost(s), 0);
   }
   function activeSeatCount() {
     return subscriptions.filter(s => s.status === 'Active' || s.status === 'Trial').length;
   }
 
-  // ---------- ROI math ----------
+
+
+  function entriesForProject(projectId) {
+    return timeEntries
+      .filter(t => t.project_id === projectId && !pendingDeletes[t.id])
+      .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  }
+
+  function totalLoggedHours(projectId) {
+    return entriesForProject(projectId).reduce((sum, t) => sum + (Number(t.hours) || 0), 0);
+  }
+
+  function loggedLaborCost(project) {
+    const hours = totalLoggedHours(project.id);
+    const effectiveRate = (Number(project.hourly_rate) || 0) * (Number(project.fl_multiplier) || 1.30);
+    return hours * effectiveRate;
+  }
+
+  // ============================================================
+  //  FINANCIAL FIXES F1 + F2 + F3:
+  //  - F1: Payback correctly handles zero-investment subscription projects
+  //  - F2: Fully-loaded multiplier applied to time-saved valuation
+  //  - F3: ROI % uses standard formula: (gross benefit - total cost) / total cost
+  // ============================================================
   function computeROI(p) {
-    const timeSavedValue = (Number(p.time_saved_hrs_week) || 0) * 52 * (Number(p.hourly_rate) || 0);
-    const annualROI = timeSavedValue + (Number(p.cost_savings_annual) || 0) + (Number(p.revenue_annual) || 0);
+    const effectiveRate = (Number(p.hourly_rate) || 0) * (Number(p.fl_multiplier) || 1.30);
+
+    // Gross annual benefit (before any costs)
+    const timeSavedValue = (Number(p.time_saved_hrs_week) || 0) * 52 * effectiveRate;
+    const grossAnnualBenefit = timeSavedValue
+      + (Number(p.cost_savings_annual) || 0)
+      + (Number(p.revenue_annual) || 0);
+
+    // Annual ongoing cost
     const annualCost = (Number(p.monthly_cost) || 0) * 12;
-    const netAnnual = annualROI - annualCost;
-    // Total investment = manually-entered external costs + logged labor cost
+
+    // Net annual benefit (after ongoing costs)
+    const netAnnualBenefit = grossAnnualBenefit - annualCost;
+
+    // Total one-time investment: external costs + logged labor (fully-loaded)
     const externalCost = Number(p.investment_cost) || 0;
     const laborCost = loggedLaborCost(p);
     const investment = externalCost + laborCost;
+
+    // --- F1: Payback ---
+    // Case 1: has investment AND net benefit is positive → standard payback
+    // Case 2: no investment, no ongoing costs, positive benefit → Immediate
+    // Case 3: no investment but HAS ongoing costs → N/A (subscription with no upfront)
+    // Case 4: net benefit zero or negative → N/A
     let paybackMonths = null;
-    if (netAnnual > 0 && investment > 0) {
-      paybackMonths = (investment / netAnnual) * 12;
-    } else if (investment === 0 && netAnnual > 0) {
-      paybackMonths = 0;
+    if (netAnnualBenefit > 0 && investment > 0) {
+      paybackMonths = (investment / netAnnualBenefit) * 12;
+    } else if (investment === 0 && annualCost === 0 && grossAnnualBenefit > 0) {
+      paybackMonths = 0; // Truly free tool with real benefit
     }
-    const roiPct = investment > 0 ? ((netAnnual - investment) / investment) * 100 : null;
-    return { timeSavedValue, annualROI, annualCost, netAnnual, paybackMonths, roiPct,
-             externalCost, laborCost, investment };
+    // All other cases: paybackMonths stays null → renders as "N/A"
+
+    // --- F3: Standard ROI % ---
+    // ROI % = (gross annual benefit - total year-1 cost) / total year-1 cost × 100
+    // Total year-1 cost = one-time investment + first year's ongoing costs
+    const totalCostYr1 = investment + annualCost;
+    const roiPct = totalCostYr1 > 0
+      ? ((grossAnnualBenefit - totalCostYr1) / totalCostYr1) * 100
+      : null;
+
+    return {
+      effectiveRate,
+      timeSavedValue,
+      grossAnnualBenefit,
+      annualCost,
+      netAnnualBenefit,
+      externalCost,
+      laborCost,
+      investment,
+      totalCostYr1,
+      paybackMonths,
+      roiPct
+    };
   }
 
   function formatMoney(n) {
@@ -1546,8 +1121,9 @@
     return '$' + Math.round(n).toLocaleString();
   }
 
+  // F1: Updated to show N/A (not "—") for not-applicable payback
   function formatPayback(months) {
-    if (months == null) return '—';
+    if (months == null) return 'N/A';
     if (months === 0) return 'Immediate';
     if (months < 1) return '< 1 mo';
     if (months > 120) return '> 10 yr';
@@ -1555,41 +1131,87 @@
     return (months/12).toFixed(1) + ' yr';
   }
 
-  // ---------- Render ----------
+  // ============================================================
+  //  FIX 5 (audit 1) + F4 (audit 2):
+  //  KPIs reflect filtered view; cards correctly labelled
+  //  "Annual Net Benefit" not "Annual ROI"
+  // ============================================================
   function renderKPIs() {
-    const active = projects.filter(p => p.status !== 'Cancelled');
-    let totalAnnualROI = 0, totalInvestment = 0, totalTimeSaved = 0;
-    let completed = 0, inProgress = 0;
-    active.forEach(p => {
+    const allActive = projects.filter(p => p.status !== 'Cancelled');
+    const viewActive = filteredProjects().filter(p => p.status !== 'Cancelled');
+    const isFiltered = viewActive.length !== allActive.length;
+
+    let totalNetBenefit = 0, totalInvestment = 0, totalTimeSaved = 0;
+    let completed = 0, inProgress = 0, totalCostYr1 = 0, totalGrossBenefit = 0;
+
+    viewActive.forEach(p => {
       const r = computeROI(p);
-      totalAnnualROI += r.netAnnual;
-      totalInvestment += Number(p.investment_cost) || 0;
+      totalNetBenefit += r.netAnnualBenefit;
+      totalInvestment += r.investment;
+      totalGrossBenefit += r.grossAnnualBenefit;
+      totalCostYr1 += r.totalCostYr1;
       totalTimeSaved += Number(p.time_saved_hrs_week) || 0;
       if (p.status === 'Completed') completed++;
       if (p.status === 'In Progress') inProgress++;
     });
-    const avgROIPct = totalInvestment > 0 ? ((totalAnnualROI - totalInvestment) / totalInvestment) * 100 : 0;
+
+    // Portfolio ROI % using the same corrected standard formula
+    const portfolioROIPct = totalCostYr1 > 0
+      ? ((totalGrossBenefit - totalCostYr1) / totalCostYr1) * 100
+      : 0;
+
+    const filterNote = isFiltered
+      ? '<div class="kpi-filter-note">Filtered view</div>' : '';
 
     document.getElementById('kpis').innerHTML = `
-      <div class="kpi"><div class="kpi-label">Total Projects</div><div class="kpi-value">${projects.length}</div><div class="kpi-sub">${inProgress} active · ${completed} completed</div></div>
-      <div class="kpi"><div class="kpi-label">Annual Net ROI</div><div class="kpi-value">${formatMoney(totalAnnualROI)}</div><div class="kpi-sub">Across active projects</div></div>
-      <div class="kpi"><div class="kpi-label">Total Investment</div><div class="kpi-value">${formatMoney(totalInvestment)}</div><div class="kpi-sub">One-time costs</div></div>
-      <div class="kpi"><div class="kpi-label">Time Saved</div><div class="kpi-value">${Math.round(totalTimeSaved)}<span class="unit"> hrs/wk</span></div><div class="kpi-sub">${Math.round(totalTimeSaved*52).toLocaleString()} hrs/yr</div></div>
-      <div class="kpi"><div class="kpi-label">Portfolio ROI</div><div class="kpi-value">${avgROIPct > 0 ? '+' : ''}${Math.round(avgROIPct)}%</div><div class="kpi-sub">Year-1 return on investment</div></div>
-      <div class="kpi kpi-subs" onclick="openSubsModal()" style="cursor:pointer;"><div class="kpi-label">AI Subscriptions</div><div class="kpi-value">${formatMoney(totalSubsMonthly())}<span class="unit"> /mo</span></div><div class="kpi-sub">${activeSeatCount()} active seats · ${formatMoney(totalSubsAnnual())}/yr</div></div>
+      <div class="kpi">
+        <div class="kpi-label">Projects${isFiltered ? ' (filtered)' : ''}</div>
+        <div class="kpi-value">${viewActive.length}</div>
+        <div class="kpi-sub">${inProgress} active · ${completed} completed</div>
+        ${filterNote}
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Annual Net Benefit</div>
+        <div class="kpi-value">${formatMoney(totalNetBenefit)}</div>
+        <div class="kpi-sub">Gross benefit minus ongoing costs</div>
+        ${filterNote}
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Total Investment</div>
+        <div class="kpi-value">${formatMoney(totalInvestment)}</div>
+        <div class="kpi-sub">External + logged labor (fully-loaded)</div>
+        ${filterNote}
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Time Saved</div>
+        <div class="kpi-value">${Math.round(totalTimeSaved)}<span class="unit"> hrs/wk</span></div>
+        <div class="kpi-sub">${Math.round(totalTimeSaved*52).toLocaleString()} hrs/yr</div>
+        ${filterNote}
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Portfolio ROI %</div>
+        <div class="kpi-value">${portfolioROIPct > 0 ? '+' : ''}${Math.round(portfolioROIPct)}%</div>
+        <div class="kpi-sub">(Gross benefit − total Yr-1 cost) / total Yr-1 cost</div>
+        ${filterNote}
+      </div>
+      <div class="kpi kpi-subs" onclick="openSubsModal()">
+        <div class="kpi-label">AI Subscriptions</div>
+        <div class="kpi-value">${formatMoney(totalSubsMonthly())}<span class="unit"> /mo</span></div>
+        <div class="kpi-sub">${activeSeatCount()} active seats · ${formatMoney(totalSubsAnnual())}/yr</div>
+      </div>
     `;
 
-    // Page meta
-    const meta = document.getElementById('pageMeta');
     const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-    meta.textContent = `${projects.length} project${projects.length===1?'':'s'} tracked  ·  ${today}`;
+    document.getElementById('pageMeta').textContent =
+      `${projects.length} project${projects.length===1?'':'s'} tracked  ·  ${today}`;
   }
 
   function renderOwnerFilter() {
     const owners = [...new Set(projects.map(p => p.owner).filter(Boolean))].sort();
     const sel = document.getElementById('filterOwner');
     const current = sel.value;
-    sel.innerHTML = '<option value="">All</option>' + owners.map(o => `<option${o===current?' selected':''}>${escapeHtml(o)}</option>`).join('');
+    sel.innerHTML = '<option value="">All</option>' + owners.map(o =>
+      `<option${o===current?' selected':''}>${escapeHtml(o)}</option>`).join('');
   }
 
   function filteredProjects() {
@@ -1613,7 +1235,7 @@
     const key = sortKey;
     return [...list].sort((a, b) => {
       let av, bv;
-      if (key === 'annual_roi') { av = computeROI(a).netAnnual; bv = computeROI(b).netAnnual; }
+      if (key === 'annual_benefit') { av = computeROI(a).netAnnualBenefit; bv = computeROI(b).netAnnualBenefit; }
       else if (key === 'payback') { av = computeROI(a).paybackMonths ?? 9e9; bv = computeROI(b).paybackMonths ?? 9e9; }
       else if (key === 'priority') {
         const order = { High: 3, Medium: 2, Low: 1 };
@@ -1652,6 +1274,8 @@
       const statusClass = 'status-' + (p.status || 'Planning').replace(/\s+/g, '-');
       const isExpanded = expandedId === p.id;
       const loggedHrs = totalLoggedHours(p.id);
+      const benefitClass = r.netAnnualBenefit > 0 ? 'roi-positive' : r.netAnnualBenefit < 0 ? 'roi-negative' : 'roi-zero';
+
       let row = `<tr class="${isExpanded ? 'expanded' : ''}">
         <td class="project-name" onclick="toggleExpand('${p.id}')">${escapeHtml(p.name || 'Untitled')}</td>
         <td>${escapeHtml(p.owner || '—')}</td>
@@ -1659,7 +1283,7 @@
         <td>${escapeHtml(p.phase || '—')}</td>
         <td class="priority-${p.priority || 'Medium'}">${escapeHtml(p.priority || 'Medium')}</td>
         <td class="roi-value">${formatMoney(r.investment)}</td>
-        <td class="roi-value ${r.netAnnual > 0 ? 'roi-positive' : 'roi-zero'}">${formatMoney(r.netAnnual)}</td>
+        <td class="roi-value ${benefitClass}">${formatMoney(r.netAnnualBenefit)}</td>
         <td class="roi-value">${formatPayback(r.paybackMonths)}</td>
         <td>
           <button class="btn btn-time ${loggedHrs > 0 ? 'has-entries' : ''}" onclick="openTimeModal('${p.id}')" title="Log time for this project">
@@ -1681,11 +1305,9 @@
     const risks = lines(p.risks);
     const deps = lines(p.dependencies);
 
-    // Hours comparison
     const loggedHrs = totalLoggedHours(p.id);
     const weeklySaved = Number(p.time_saved_hrs_week) || 0;
     const annualSaved = weeklySaved * 52;
-    // Break-even: how many weeks of time-saved before we recover the build hours
     let breakEvenWeeks = null;
     if (weeklySaved > 0 && loggedHrs > 0) breakEvenWeeks = loggedHrs / weeklySaved;
 
@@ -1693,7 +1315,7 @@
       <div class="detail-content">
         <div class="detail-block">
           <h4>Description</h4>
-          <p>${escapeHtml(p.description || '—') || '—'}</p>
+          <p>${escapeHtml(p.description || '—')}</p>
           ${tags.length ? `<div style="margin-top:10px">${tags.map(t => `<span class="tag-pill">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
         </div>
         <div class="detail-block">
@@ -1708,20 +1330,23 @@
           <h4>Investment Breakdown</h4>
           <dl class="detail-metrics">
             <dt>External costs:</dt><dd>${formatMoney(r.externalCost)}</dd>
-            <dt>Logged labor (${loggedHrs.toFixed(1)} hrs):</dt><dd>${formatMoney(r.laborCost)}</dd>
+            <dt>Logged labor (${loggedHrs.toFixed(1)} hrs @ ${formatMoney(r.effectiveRate)}/hr):</dt><dd>${formatMoney(r.laborCost)}</dd>
             <dt><strong>Total investment:</strong></dt><dd><strong>${formatMoney(r.investment)}</strong></dd>
           </dl>
         </div>
         <div class="detail-block">
           <h4>ROI Breakdown</h4>
           <dl class="detail-metrics">
+            <dt>Effective rate:</dt><dd>${formatMoney(r.effectiveRate)}/hr</dd>
             <dt>Time-saved value:</dt><dd>${formatMoney(r.timeSavedValue)}</dd>
             <dt>Direct savings:</dt><dd>${formatMoney(p.cost_savings_annual)}</dd>
             <dt>Revenue:</dt><dd>${formatMoney(p.revenue_annual)}</dd>
-            <dt>Gross annual:</dt><dd>${formatMoney(r.annualROI)}</dd>
-            <dt>Ongoing cost:</dt><dd>${formatMoney(r.annualCost)}</dd>
-            <dt><strong>Net annual:</strong></dt><dd><strong>${formatMoney(r.netAnnual)}</strong></dd>
-            ${p.productivity_gain_pct ? `<dt>Productivity:</dt><dd>+${p.productivity_gain_pct}%</dd>` : ''}
+            <dt>Gross annual benefit:</dt><dd>${formatMoney(r.grossAnnualBenefit)}</dd>
+            <dt>Annual ongoing cost:</dt><dd>${formatMoney(r.annualCost)}</dd>
+            <dt><strong>Net annual benefit:</strong></dt><dd><strong>${formatMoney(r.netAnnualBenefit)}</strong></dd>
+            <dt>Total Yr-1 cost:</dt><dd>${formatMoney(r.totalCostYr1)}</dd>
+            <dt><strong>ROI % (Yr 1):</strong></dt><dd><strong>${r.roiPct == null ? 'N/A' : (r.roiPct > 0 ? '+' : '') + Math.round(r.roiPct) + '%'}</strong></dd>
+            ${p.productivity_gain_pct ? `<dt>Productivity gain:</dt><dd>+${p.productivity_gain_pct}%</dd>` : ''}
           </dl>
         </div>
         <div class="detail-block">
@@ -1751,24 +1376,56 @@
     renderTable();
   }
 
-  // ---------- Time Log Modal ----------
+  // ============================================================
+  //  FIX 1 (audit 1): Focus trap for modals
+  // ============================================================
+  function trapFocus(modalId) {
+    const overlay = document.getElementById(modalId);
+    const modal = overlay.querySelector('.modal');
+    if (!modal) return;
+    // Remove any prior listener to avoid stacking
+    modal._trapHandler && modal.removeEventListener('keydown', modal._trapHandler);
+    modal._trapHandler = function(e) {
+      if (e.key !== 'Tab') return;
+      const focusable = Array.from(modal.querySelectorAll(
+        'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter(el => el.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+    modal.addEventListener('keydown', modal._trapHandler);
+    // Focus the first focusable element
+    const first = modal.querySelector('button:not([disabled]), input:not([disabled]), select:not([disabled])');
+    if (first) setTimeout(() => first.focus(), 50);
+  }
+
+  // ============================================================
+  //  Time Log Modal
+  // ============================================================
   function openTimeModal(projectId) {
     const p = projects.find(x => x.id === projectId);
     if (!p) return;
     activeTimeProjectId = projectId;
+    editingTimeEntryId = null;
     document.getElementById('timeModalProject').textContent = p.name || 'Untitled';
-    // Pre-fill date with today
     document.getElementById('t_date').value = new Date().toISOString().slice(0, 10);
     document.getElementById('t_hours').value = '';
     document.getElementById('t_comments').value = '';
     renderTimeEntries();
     document.getElementById('timeModal').classList.add('active');
+    trapFocus('timeModal'); // FIX 1
   }
 
   function closeTimeModal() {
     document.getElementById('timeModal').classList.remove('active');
     activeTimeProjectId = null;
-    // Re-render main table in case logged hours changed
+    editingTimeEntryId = null;
     renderTable();
   }
 
@@ -1776,34 +1433,106 @@
     if (!activeTimeProjectId) return;
     const p = projects.find(x => x.id === activeTimeProjectId);
     if (!p) return;
-    const entries = entriesForProject(activeTimeProjectId);
-    const totalHrs = entries.reduce((s, e) => s + (Number(e.hours) || 0), 0);
-    const rate = Number(p.hourly_rate) || 0;
-    const laborCost = totalHrs * rate;
+    // Include pending-delete entries in all entries (for display with dimming)
+    const allEntries = timeEntries
+      .filter(t => t.project_id === activeTimeProjectId)
+      .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    const confirmedEntries = allEntries.filter(t => !pendingDeletes[t.id]);
+    const totalHrs = confirmedEntries.reduce((s, e) => s + (Number(e.hours) || 0), 0);
+    const effectiveRate = (Number(p.hourly_rate) || 0) * (Number(p.fl_multiplier) || 1.30);
+    const laborCost = totalHrs * effectiveRate;
 
-    // Summary strip
     document.getElementById('timeSummary').innerHTML = `
-      <div class="item"><div class="val">${entries.length}</div><div class="lbl">Entries</div></div>
+      <div class="item"><div class="val">${confirmedEntries.length}</div><div class="lbl">Entries</div></div>
       <div class="item"><div class="val">${totalHrs.toFixed(1)}<span style="font-size:12px;color:var(--charcoal);font-weight:500"> hrs</span></div><div class="lbl">Total Logged</div></div>
-      <div class="item"><div class="val">${formatMoney(laborCost)}</div><div class="lbl">Labor Cost @ $${rate}/hr</div></div>
+      <div class="item"><div class="val">${formatMoney(laborCost)}</div><div class="lbl">Labor Cost @ ${formatMoney(effectiveRate)}/hr</div></div>
     `;
 
-    // Entries table
     const body = document.getElementById('timeEntriesBody');
-    if (entries.length === 0) {
+    if (allEntries.length === 0) {
       body.innerHTML = `<tr><td colspan="4"><div class="time-empty">No entries yet. Add one above to start tracking time.</div></td></tr>`;
       return;
     }
-    body.innerHTML = entries.map(e => `
-      <tr>
-        <td>${escapeHtml(e.date || '—')}</td>
-        <td class="hours-col">${Number(e.hours).toFixed(2)}</td>
-        <td>${escapeHtml(e.comments || '')}</td>
-        <td style="text-align:right">
-          <button class="delete-btn" onclick="deleteTimeEntryById('${e.id}')" title="Delete entry">×</button>
-        </td>
-      </tr>
-    `).join('');
+
+    body.innerHTML = allEntries.map(e => {
+      const isPending = !!pendingDeletes[e.id];
+      if (editingTimeEntryId === e.id && !isPending) {
+        return `
+          <tr class="editing" data-entry-id="${e.id}">
+            <td><input type="date" class="edit-input" id="edit_date_${e.id}" value="${escapeHtml(e.date || '')}"></td>
+            <td class="hours-col"><input type="number" min="0" step="0.25" class="edit-input hours-input" id="edit_hours_${e.id}" value="${Number(e.hours).toFixed(2)}"></td>
+            <td><input type="text" class="edit-input" id="edit_comments_${e.id}" value="${escapeHtml(e.comments || '')}" placeholder="Comments"></td>
+            <td style="text-align:right">
+              <div class="time-row-actions">
+                <button class="time-icon-btn save-btn" onclick="saveTimeEntryEdit('${e.id}')">Save</button>
+                <button class="time-icon-btn cancel-btn" onclick="cancelTimeEntryEdit()">Cancel</button>
+              </div>
+            </td>
+          </tr>`;
+      }
+      return `
+        <tr data-entry-id="${e.id}" ${isPending ? 'class="pending-delete"' : ''}>
+          <td>${escapeHtml(e.date || '—')}</td>
+          <td class="hours-col">${Number(e.hours).toFixed(2)}</td>
+          <td>${escapeHtml(e.comments || '')}${isPending ? ' <em style="color:var(--charcoal);font-size:11px">(undo pending…)</em>' : ''}</td>
+          <td style="text-align:right">
+            <div class="time-row-actions">
+              ${isPending
+                ? `<button class="time-icon-btn cancel-btn" style="opacity:1" onclick="undoDeleteTimeEntry('${e.id}')">Undo</button>`
+                : `<button class="time-icon-btn edit-btn" onclick="startEditTimeEntry('${e.id}')" title="Edit">✎</button>
+                   <button class="time-icon-btn delete-btn" onclick="deleteTimeEntryById('${e.id}')" title="Delete">×</button>`
+              }
+            </div>
+          </td>
+        </tr>`;
+    }).join('');
+
+    if (editingTimeEntryId) {
+      const hoursInput = document.getElementById(`edit_hours_${editingTimeEntryId}`);
+      if (hoursInput) { hoursInput.focus(); hoursInput.select(); }
+      ['date', 'hours', 'comments'].forEach(field => {
+        const el = document.getElementById(`edit_${field}_${editingTimeEntryId}`);
+        if (el) {
+          el.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Enter') { ev.preventDefault(); saveTimeEntryEdit(editingTimeEntryId); }
+            else if (ev.key === 'Escape') { ev.preventDefault(); cancelTimeEntryEdit(); }
+          });
+        }
+      });
+    }
+  }
+
+  function startEditTimeEntry(id) { editingTimeEntryId = id; renderTimeEntries(); }
+  function cancelTimeEntryEdit() { editingTimeEntryId = null; renderTimeEntries(); }
+
+  async function saveTimeEntryEdit(id) {
+    const dateEl = document.getElementById(`edit_date_${id}`);
+    const hoursEl = document.getElementById(`edit_hours_${id}`);
+    const commentsEl = document.getElementById(`edit_comments_${id}`);
+    if (!dateEl || !hoursEl || !commentsEl) return;
+    const date = dateEl.value;
+    const hours = Number(hoursEl.value);
+    const comments = commentsEl.value.trim();
+    if (!date) { toast('Date is required', 'error'); return; }
+    if (!hours || hours <= 0) { toast('Hours must be greater than 0', 'error'); return; }
+    const existing = timeEntries.find(t => t.id === id);
+    if (!existing) { toast('Entry not found', 'error'); return; }
+    const updated = { ...existing, date, hours, comments, updated_at: '' };
+    try {
+      setStatus('loading', 'Saving…');
+      const saved = await Backend.upsertTime(updated);
+      const normalized = normalizeTimeEntry(saved);
+      const idx = timeEntries.findIndex(t => t.id === normalized.id);
+      if (idx >= 0) timeEntries[idx] = normalized; else timeEntries.push(normalized);
+      editingTimeEntryId = null;
+      renderTimeEntries();
+      setStatus(Backend.isConfigured() ? 'online' : 'offline', Backend.isConfigured() ? 'Synced' : 'Local only');
+      toast('Time entry updated', 'success');
+    } catch (err) {
+      console.error(err);
+      toast('Save failed: ' + err.message, 'error');
+      setStatus('offline', 'Error');
+    }
   }
 
   async function addTimeEntry() {
@@ -1811,25 +1540,17 @@
     const date = document.getElementById('t_date').value;
     const hours = Number(document.getElementById('t_hours').value);
     const comments = document.getElementById('t_comments').value.trim();
-
     if (!date) { toast('Date is required', 'error'); return; }
     if (!hours || hours <= 0) { toast('Hours must be greater than 0', 'error'); return; }
-
     const entry = {
       id: 't_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-      project_id: activeTimeProjectId,
-      date: date,
-      hours: hours,
-      comments: comments,
-      created_at: '',
-      updated_at: ''
+      project_id: activeTimeProjectId, date, hours, comments,
+      created_at: '', updated_at: ''
     };
-
     try {
       setStatus('loading', 'Saving…');
       const saved = await Backend.upsertTime(entry);
       timeEntries.push(normalizeTimeEntry(saved));
-      // Clear the form inputs (keep date for quick multi-entry)
       document.getElementById('t_hours').value = '';
       document.getElementById('t_comments').value = '';
       renderTimeEntries();
@@ -1842,31 +1563,180 @@
     }
   }
 
-  async function deleteTimeEntryById(id) {
-    if (!confirm('Delete this time entry?')) return;
+  // ============================================================
+  //  FIX 3 (audit 1): 5-second undo on time entry delete
+  // ============================================================
+  function deleteTimeEntryById(id) {
+    if (pendingDeletes[id]) return; // already pending
+    const entry = timeEntries.find(t => t.id === id);
+    if (!entry) return;
+
+    const timer = setTimeout(async () => {
+      delete pendingDeletes[id];
+      try {
+        setStatus('loading', 'Deleting…');
+        await Backend.removeTime(id);
+        timeEntries = timeEntries.filter(t => t.id !== id);
+        if (editingTimeEntryId === id) editingTimeEntryId = null;
+        renderTimeEntries();
+        setStatus(Backend.isConfigured() ? 'online' : 'offline', Backend.isConfigured() ? 'Synced' : 'Local only');
+      } catch (err) {
+        toast('Delete failed: ' + err.message, 'error');
+        renderTimeEntries();
+      }
+    }, 5000);
+
+    pendingDeletes[id] = { timer, entry };
+    renderTimeEntries();
+    toast('Entry removed — tap Undo to cancel', '');
+  }
+
+  function undoDeleteTimeEntry(id) {
+    if (!pendingDeletes[id]) return;
+    clearTimeout(pendingDeletes[id].timer);
+    delete pendingDeletes[id];
+    renderTimeEntries();
+    toast('Deletion cancelled', 'success');
+  }
+
+  // ============================================================
+  //  Project Modal
+  // ============================================================
+  function openModal(project) {
+    document.getElementById('modalTitle').textContent = project ? 'Edit Project' : 'New Project';
+    document.getElementById('deleteBtn').style.display = project ? 'inline-flex' : 'none';
+    const p = project || {
+      id: '', name: '', owner: '', status: 'Planning', phase: 'Discovery', priority: 'Medium',
+      description: '', start_date: '', target_date: '', actual_date: '',
+      investment_cost: 0, monthly_cost: 0, hourly_rate: 75, fl_multiplier: 1.30,
+      time_saved_hrs_week: 0, cost_savings_annual: 0, revenue_annual: 0,
+      productivity_gain_pct: 0, quality_notes: '', risks: '', dependencies: '', tags: ''
+    };
+    document.getElementById('f_id').value = p.id;
+    document.getElementById('f_name').value = p.name;
+    document.getElementById('f_owner').value = p.owner;
+    document.getElementById('f_status').value = p.status || 'Planning';
+    document.getElementById('f_phase').value = p.phase || 'Discovery';
+    document.getElementById('f_priority').value = p.priority || 'Medium';
+    document.getElementById('f_description').value = p.description || '';
+    document.getElementById('f_tags').value = p.tags || '';
+    document.getElementById('f_start_date').value = p.start_date || '';
+    document.getElementById('f_target_date').value = p.target_date || '';
+    document.getElementById('f_actual_date').value = p.actual_date || '';
+    document.getElementById('f_investment_cost').value = p.investment_cost || 0;
+    document.getElementById('f_monthly_cost').value = p.monthly_cost || 0;
+    document.getElementById('f_hourly_rate').value = p.hourly_rate || 75;
+    document.getElementById('f_fl_multiplier').value = p.fl_multiplier || 1.30;
+    document.getElementById('f_time_saved_hrs_week').value = p.time_saved_hrs_week || 0;
+    document.getElementById('f_cost_savings_annual').value = p.cost_savings_annual || 0;
+    document.getElementById('f_revenue_annual').value = p.revenue_annual || 0;
+    document.getElementById('f_productivity_gain_pct').value = p.productivity_gain_pct || 0;
+    document.getElementById('f_quality_notes').value = p.quality_notes || '';
+    document.getElementById('f_risks').value = p.risks || '';
+    document.getElementById('f_dependencies').value = p.dependencies || '';
+    updateComputed();
+    document.getElementById('modal').classList.add('active');
+    trapFocus('modal'); // FIX 1
+  }
+
+  function closeModal() { document.getElementById('modal').classList.remove('active'); }
+
+  function editProject(id) {
+    const p = projects.find(x => x.id === id);
+    if (p) openModal(p);
+  }
+
+  function readForm() {
+    return {
+      id: document.getElementById('f_id').value || ('p_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6)),
+      name: document.getElementById('f_name').value.trim(),
+      owner: document.getElementById('f_owner').value.trim(),
+      status: document.getElementById('f_status').value,
+      phase: document.getElementById('f_phase').value,
+      priority: document.getElementById('f_priority').value,
+      description: document.getElementById('f_description').value.trim(),
+      tags: document.getElementById('f_tags').value.trim(),
+      start_date: document.getElementById('f_start_date').value,
+      target_date: document.getElementById('f_target_date').value,
+      actual_date: document.getElementById('f_actual_date').value,
+      investment_cost: Number(document.getElementById('f_investment_cost').value) || 0,
+      monthly_cost: Number(document.getElementById('f_monthly_cost').value) || 0,
+      hourly_rate: Number(document.getElementById('f_hourly_rate').value) || 0,
+      fl_multiplier: Number(document.getElementById('f_fl_multiplier').value) || 1.30,
+      time_saved_hrs_week: Number(document.getElementById('f_time_saved_hrs_week').value) || 0,
+      cost_savings_annual: Number(document.getElementById('f_cost_savings_annual').value) || 0,
+      revenue_annual: Number(document.getElementById('f_revenue_annual').value) || 0,
+      productivity_gain_pct: Number(document.getElementById('f_productivity_gain_pct').value) || 0,
+      quality_notes: document.getElementById('f_quality_notes').value.trim(),
+      risks: document.getElementById('f_risks').value.trim(),
+      dependencies: document.getElementById('f_dependencies').value.trim()
+    };
+  }
+
+  function updateComputed() {
+    const p = readForm();
+    const r = computeROI(p);
+    document.getElementById('c_effective_rate').textContent = formatMoney(r.effectiveRate) + '/hr';
+    document.getElementById('c_annual_benefit').textContent = formatMoney(r.netAnnualBenefit);
+    document.getElementById('c_payback').textContent = formatPayback(r.paybackMonths);
+    document.getElementById('c_roi_pct').textContent = r.roiPct == null ? 'N/A' : (r.roiPct > 0 ? '+' : '') + Math.round(r.roiPct) + '%';
+    document.getElementById('c_time_saved_value').textContent = formatMoney(r.timeSavedValue);
+    document.getElementById('c_total_investment').textContent = formatMoney(r.investment);
+  }
+
+  async function saveProject() {
+    const p = readForm();
+    if (!p.name) { toast('Project name is required', 'error'); return; }
+    if (!p.owner) { toast('Owner is required', 'error'); return; }
+    try {
+      setStatus('loading', 'Saving…');
+      const saved = await Backend.upsert(p);
+      const normalized = normalizeProject(saved);
+      const idx = projects.findIndex(x => x.id === normalized.id);
+      if (idx >= 0) projects[idx] = normalized; else projects.push(normalized);
+      closeModal();
+      renderTable();
+      setStatus(Backend.isConfigured() ? 'online' : 'offline', Backend.isConfigured() ? 'Synced' : 'Local only');
+      toast('Project saved', 'success');
+    } catch (err) {
+      console.error(err);
+      toast('Save failed: ' + err.message, 'error');
+      setStatus('offline', 'Error');
+    }
+  }
+
+  async function deleteProject() {
+    const id = document.getElementById('f_id').value;
+    if (!id) return;
+    if (!confirm('Delete this project and all its time entries? This cannot be undone.')) return;
     try {
       setStatus('loading', 'Deleting…');
-      await Backend.removeTime(id);
-      timeEntries = timeEntries.filter(t => t.id !== id);
-      renderTimeEntries();
+      await Backend.remove(id); // FIX 2: now cleans up time entries too
+      projects = projects.filter(x => x.id !== id);
+      closeModal();
+      renderTable();
       setStatus(Backend.isConfigured() ? 'online' : 'offline', Backend.isConfigured() ? 'Synced' : 'Local only');
-      toast('Entry deleted', 'success');
+      toast('Project and time entries deleted', 'success');
     } catch (err) {
       toast('Delete failed: ' + err.message, 'error');
     }
   }
 
-  // ---------- Subscriptions Modal ----------
+
+  // ============================================================
+  //  Subscriptions Modal
+  // ============================================================
   function openSubsModal() {
     resetSubForm();
     renderSubscriptions();
     document.getElementById('subsModal').classList.add('active');
+    trapFocus('subsModal');
   }
 
   function closeSubsModal() {
     document.getElementById('subsModal').classList.remove('active');
     resetSubForm();
-    renderTable(); // refresh KPI in main view
+    renderTable();
   }
 
   function resetSubForm() {
@@ -1899,7 +1769,6 @@
     document.getElementById('s_start_date').value = s.start_date || '';
     document.getElementById('s_renewal_date').value = s.renewal_date || '';
     document.getElementById('s_notes').value = s.notes || '';
-    // Scroll the form into view
     document.getElementById('s_platform').focus();
   }
 
@@ -1913,9 +1782,9 @@
 
     const sub = {
       id: editingSubId || ('s_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6)),
-      platform: platform,
+      platform,
       assigned_to: assignedTo,
-      cost: cost,
+      cost,
       billing_cycle: document.getElementById('s_billing_cycle').value,
       start_date: document.getElementById('s_start_date').value,
       renewal_date: document.getElementById('s_renewal_date').value,
@@ -1935,7 +1804,6 @@
       const normalized = normalizeSubscription(saved);
       const idx = subscriptions.findIndex(x => x.id === normalized.id);
       if (idx >= 0) subscriptions[idx] = normalized; else subscriptions.push(normalized);
-      // Auto-expand the platform we just added/edited to
       expandedPlatforms.add(normalized.platform);
       resetSubForm();
       renderSubscriptions();
@@ -1973,17 +1841,12 @@
   function formatRenewal(s) {
     const days = daysUntilRenewal(s);
     if (days === null) return '<span style="color:var(--charcoal);">—</span>';
-    if (days < 0) {
-      return `<span class="renewal-cell danger">${s.renewal_date}<span class="badge">Past Due</span></span>`;
-    }
-    if (days <= 30) {
-      return `<span class="renewal-cell warn">${s.renewal_date}<span class="badge">${days}d</span></span>`;
-    }
+    if (days < 0) return `<span class="renewal-cell danger">${s.renewal_date}<span class="badge">Past Due</span></span>`;
+    if (days <= 30) return `<span class="renewal-cell warn">${s.renewal_date}<span class="badge">${days}d</span></span>`;
     return `<span class="renewal-cell">${s.renewal_date}</span>`;
   }
 
   function renderSubscriptions() {
-    // Summary strip
     const monthly = totalSubsMonthly();
     const annual = totalSubsAnnual();
     const seats = activeSeatCount();
@@ -1997,17 +1860,12 @@
       <div class="item"><div class="val">${formatMoney(annual)}<span style="font-size:12px;color:var(--charcoal);font-weight:500"> /yr</span></div><div class="lbl">Annual Spend</div></div>
     `;
 
-    // Platform datalist for autocomplete
     const allPlatforms = [...new Set(subscriptions.map(s => s.platform).filter(Boolean))].sort();
     document.getElementById('platformList').innerHTML = allPlatforms.map(p => `<option value="${escapeHtml(p)}">`).join('');
 
-    // Grouped list
     const wrap = document.getElementById('subsListWrap');
     if (subscriptions.length === 0) {
-      wrap.innerHTML = `<div class="subs-empty">
-        <h3>No licenses tracked yet</h3>
-        <p>Use the form above to add your first AI subscription or license.</p>
-      </div>`;
+      wrap.innerHTML = `<div class="subs-empty"><h3>No licenses tracked yet</h3><p>Use the form above to add your first AI subscription or license.</p></div>`;
       return;
     }
 
@@ -2022,18 +1880,16 @@
             <div class="platform-name">
               <span class="expand-arrow">▶</span>
               ${escapeHtml(g.platform)}
-              <span style="font-weight:500; font-size:12px; color:var(--charcoal);">· ${g.seats.length} seat${g.seats.length===1?'':'s'}</span>
+              <span style="font-weight:500;font-size:12px;color:var(--charcoal);">· ${g.seats.length} seat${g.seats.length===1?'':'s'}</span>
             </div>
-            <div class="platform-meta">
-              ${formatMoney(platformMonthly)}/mo · ${formatMoney(platformMonthly * 12)}/yr
-            </div>
+            <div class="platform-meta">${formatMoney(platformMonthly)}/mo · ${formatMoney(platformMonthly * 12)}/yr</div>
           </div>
           <div class="platform-seats">
             ${g.seats.map(s => `
               <div class="seat-row">
                 <div class="seat-person">${escapeHtml(s.assigned_to || '—')}</div>
                 <div class="seat-cost">${formatMoney(s.cost)}</div>
-                <div class="seat-cycle">${s.billing_cycle === 'annual' ? 'Annual' : 'Monthly'}<br><span style="text-transform:none; font-weight:400; color:var(--charcoal);">${formatMoney(subMonthlyCost(s))}/mo equiv.</span></div>
+                <div class="seat-cycle">${s.billing_cycle === 'annual' ? 'Annual' : 'Monthly'}<br><span style="text-transform:none;font-weight:400;color:var(--charcoal);">${formatMoney(subMonthlyCost(s))}/mo equiv.</span></div>
                 <div>${formatRenewal(s)}</div>
                 <div><span class="seat-status seat-status-${s.status}">${s.status}</span></div>
                 <div class="seat-actions">
@@ -2048,125 +1904,9 @@
     }).join('');
   }
 
-  // ---------- Modal ----------
-  function openModal(project) {
-    document.getElementById('modalTitle').textContent = project ? 'Edit Project' : 'New Project';
-    document.getElementById('deleteBtn').style.display = project ? 'inline-flex' : 'none';
-    const p = project || {
-      id: '', name: '', owner: '', status: 'Planning', phase: 'Discovery', priority: 'Medium',
-      description: '', start_date: '', target_date: '', actual_date: '',
-      investment_cost: 0, monthly_cost: 0, hourly_rate: 75,
-      time_saved_hrs_week: 0, cost_savings_annual: 0, revenue_annual: 0,
-      productivity_gain_pct: 0, quality_notes: '',
-      risks: '', dependencies: '', tags: ''
-    };
-    document.getElementById('f_id').value = p.id;
-    document.getElementById('f_name').value = p.name;
-    document.getElementById('f_owner').value = p.owner;
-    document.getElementById('f_status').value = p.status || 'Planning';
-    document.getElementById('f_phase').value = p.phase || 'Discovery';
-    document.getElementById('f_priority').value = p.priority || 'Medium';
-    document.getElementById('f_description').value = p.description || '';
-    document.getElementById('f_tags').value = p.tags || '';
-    document.getElementById('f_start_date').value = p.start_date || '';
-    document.getElementById('f_target_date').value = p.target_date || '';
-    document.getElementById('f_actual_date').value = p.actual_date || '';
-    document.getElementById('f_investment_cost').value = p.investment_cost || 0;
-    document.getElementById('f_monthly_cost').value = p.monthly_cost || 0;
-    document.getElementById('f_hourly_rate').value = p.hourly_rate || 75;
-    document.getElementById('f_time_saved_hrs_week').value = p.time_saved_hrs_week || 0;
-    document.getElementById('f_cost_savings_annual').value = p.cost_savings_annual || 0;
-    document.getElementById('f_revenue_annual').value = p.revenue_annual || 0;
-    document.getElementById('f_productivity_gain_pct').value = p.productivity_gain_pct || 0;
-    document.getElementById('f_quality_notes').value = p.quality_notes || '';
-    document.getElementById('f_risks').value = p.risks || '';
-    document.getElementById('f_dependencies').value = p.dependencies || '';
-    updateComputed();
-    document.getElementById('modal').classList.add('active');
-  }
-
-  function closeModal() {
-    document.getElementById('modal').classList.remove('active');
-  }
-
-  function editProject(id) {
-    const p = projects.find(x => x.id === id);
-    if (p) openModal(p);
-  }
-
-  function readForm() {
-    return {
-      id: document.getElementById('f_id').value || ('p_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6)),
-      name: document.getElementById('f_name').value.trim(),
-      owner: document.getElementById('f_owner').value.trim(),
-      status: document.getElementById('f_status').value,
-      phase: document.getElementById('f_phase').value,
-      priority: document.getElementById('f_priority').value,
-      description: document.getElementById('f_description').value.trim(),
-      tags: document.getElementById('f_tags').value.trim(),
-      start_date: document.getElementById('f_start_date').value,
-      target_date: document.getElementById('f_target_date').value,
-      actual_date: document.getElementById('f_actual_date').value,
-      investment_cost: Number(document.getElementById('f_investment_cost').value) || 0,
-      monthly_cost: Number(document.getElementById('f_monthly_cost').value) || 0,
-      hourly_rate: Number(document.getElementById('f_hourly_rate').value) || 0,
-      time_saved_hrs_week: Number(document.getElementById('f_time_saved_hrs_week').value) || 0,
-      cost_savings_annual: Number(document.getElementById('f_cost_savings_annual').value) || 0,
-      revenue_annual: Number(document.getElementById('f_revenue_annual').value) || 0,
-      productivity_gain_pct: Number(document.getElementById('f_productivity_gain_pct').value) || 0,
-      quality_notes: document.getElementById('f_quality_notes').value.trim(),
-      risks: document.getElementById('f_risks').value.trim(),
-      dependencies: document.getElementById('f_dependencies').value.trim()
-    };
-  }
-
-  function updateComputed() {
-    const p = readForm();
-    const r = computeROI(p);
-    document.getElementById('c_annual_roi').textContent = formatMoney(r.netAnnual);
-    document.getElementById('c_payback').textContent = formatPayback(r.paybackMonths);
-    document.getElementById('c_roi_pct').textContent = r.roiPct == null ? '—' : (r.roiPct > 0 ? '+' : '') + Math.round(r.roiPct) + '%';
-  }
-
-  async function saveProject() {
-    const p = readForm();
-    if (!p.name) { toast('Project name is required', 'error'); return; }
-    if (!p.owner) { toast('Owner is required', 'error'); return; }
-    try {
-      setStatus('loading', 'Saving…');
-      const saved = await Backend.upsert(p);
-      const normalized = normalizeProject(saved);
-      const idx = projects.findIndex(x => x.id === normalized.id);
-      if (idx >= 0) projects[idx] = normalized; else projects.push(normalized);
-      closeModal();
-      renderTable();
-      setStatus(Backend.isConfigured() ? 'online' : 'offline', Backend.isConfigured() ? 'Synced' : 'Local only');
-      toast('Project saved', 'success');
-    } catch (err) {
-      console.error(err);
-      toast('Save failed: ' + err.message, 'error');
-      setStatus('offline', 'Error');
-    }
-  }
-
-  async function deleteProject() {
-    const id = document.getElementById('f_id').value;
-    if (!id) return;
-    if (!confirm('Delete this project? This cannot be undone.')) return;
-    try {
-      setStatus('loading', 'Deleting…');
-      await Backend.remove(id);
-      projects = projects.filter(x => x.id !== id);
-      closeModal();
-      renderTable();
-      setStatus(Backend.isConfigured() ? 'online' : 'offline', Backend.isConfigured() ? 'Synced' : 'Local only');
-      toast('Project deleted', 'success');
-    } catch (err) {
-      toast('Delete failed: ' + err.message, 'error');
-    }
-  }
-
-  // ---------- Sort ----------
+  // ============================================================
+  //  Sort
+  // ============================================================
   document.querySelectorAll('thead th[data-sort]').forEach(th => {
     th.addEventListener('click', () => {
       const key = th.dataset.sort;
@@ -2183,16 +1923,19 @@
     renderTable();
   }
 
-  // ---------- Import / Export ----------
+  // ============================================================
+  //  FIX 4 (audit 1): Export/Import includes time entries
+  // ============================================================
   function exportJSON() {
-    const blob = new Blob([JSON.stringify(projects, null, 2)], { type: 'application/json' });
+    const payload = { version: 2, projects, timeEntries, subscriptions };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     a.download = `degelman-ai-tracker-${new Date().toISOString().slice(0,10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
-    toast('Exported ' + projects.length + ' projects', 'success');
+    toast(`Exported ${projects.length} projects + ${timeEntries.length} time entries`, 'success');
   }
 
   function importJSON(event) {
@@ -2201,9 +1944,13 @@
     const reader = new FileReader();
     reader.onload = async () => {
       try {
-        const data = JSON.parse(reader.result);
-        if (!Array.isArray(data)) throw new Error('Expected JSON array');
-        if (!confirm(`Import ${data.length} projects? Existing projects with the same ID will be overwritten.`)) return;
+        const raw = JSON.parse(reader.result);
+        // Support both old format (plain array) and new format ({version, projects, timeEntries})
+        const data = Array.isArray(raw) ? raw : (raw.projects || []);
+        const times = Array.isArray(raw) ? [] : (raw.timeEntries || []);
+        const subs = Array.isArray(raw) ? [] : (raw.subscriptions || []);
+        if (!Array.isArray(data)) throw new Error('Expected JSON array or object with projects array');
+        if (!confirm(`Import ${data.length} projects and ${times.length} time entries? Existing records with the same ID will be overwritten.`)) return;
         setStatus('loading', 'Importing…');
         for (const p of data) {
           const normalized = normalizeProject(p);
@@ -2211,9 +1958,21 @@
           const idx = projects.findIndex(x => x.id === normalized.id);
           if (idx >= 0) projects[idx] = normalized; else projects.push(normalized);
         }
+        for (const t of times) {
+          const nt = normalizeTimeEntry(t);
+          await Backend.upsertTime(nt);
+          const ti = timeEntries.findIndex(x => x.id === nt.id);
+          if (ti >= 0) timeEntries[ti] = nt; else timeEntries.push(nt);
+        }
         renderTable();
         setStatus(Backend.isConfigured() ? 'online' : 'offline', Backend.isConfigured() ? 'Synced' : 'Local only');
-        toast('Imported ' + data.length + ' projects', 'success');
+        for (const s of subs) {
+          const ns = normalizeSubscription(s);
+          await Backend.upsertSubscription(ns);
+          const si = subscriptions.findIndex(x => x.id === ns.id);
+          if (si >= 0) subscriptions[si] = ns; else subscriptions.push(ns);
+        }
+        toast(`Imported ${data.length} projects + ${times.length} time entries + ${subs.length} subscriptions`, 'success');
       } catch (err) {
         toast('Import failed: ' + err.message, 'error');
       }
@@ -2222,7 +1981,9 @@
     reader.readAsText(file);
   }
 
-  // ---------- Utils ----------
+  // ============================================================
+  //  Utils
+  // ============================================================
   function escapeHtml(s) {
     return String(s == null ? '' : s)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -2238,13 +1999,15 @@
   let toastTimer;
   function toast(msg, kind) {
     const t = document.getElementById('toast');
-    t.textContent = msg;
+    t.innerHTML = msg; // innerHTML to allow undo link
     t.className = 'toast show ' + (kind || '');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => t.className = 'toast ' + (kind || ''), 2800);
+    toastTimer = setTimeout(() => t.className = 'toast ' + (kind || ''), 3500);
   }
 
-  // ---------- Init ----------
+  // ============================================================
+  //  Init
+  // ============================================================
   async function init() {
     if (!Backend.isConfigured()) {
       document.getElementById('setupBanner').style.display = 'block';
@@ -2269,14 +2032,15 @@
     renderTable();
   }
 
-  document.getElementById('modal').addEventListener('click', (e) => {
-    if (e.target.id === 'modal') closeModal();
-  });
-  document.getElementById('timeModal').addEventListener('click', (e) => {
-    if (e.target.id === 'timeModal') closeTimeModal();
-  });
-  document.getElementById('subsModal').addEventListener('click', (e) => {
-    if (e.target.id === 'subsModal') closeSubsModal();
+  // Close modals on overlay click; Escape key closes topmost modal
+  document.getElementById('modal').addEventListener('click', (e) => { if (e.target.id === 'modal') closeModal(); });
+  document.getElementById('timeModal').addEventListener('click', (e) => { if (e.target.id === 'timeModal') closeTimeModal(); });
+  document.getElementById('subsModal').addEventListener('click', (e) => { if (e.target.id === 'subsModal') closeSubsModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (document.getElementById('subsModal').classList.contains('active')) closeSubsModal();
+    else if (document.getElementById('timeModal').classList.contains('active')) closeTimeModal();
+    else if (document.getElementById('modal').classList.contains('active')) closeModal();
   });
 
   init();
