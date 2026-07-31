@@ -1137,67 +1137,123 @@
   //  "Annual Net Benefit" not "Annual ROI"
   // ============================================================
   function renderKPIs() {
-    const allActive = projects.filter(p => p.status !== 'Cancelled');
-    const viewActive = filteredProjects().filter(p => p.status !== 'Cancelled');
-    const isFiltered = viewActive.length !== allActive.length;
+    const filtered = filteredProjects();
+    const isFiltered = filtered.length !== projects.length;
+    const filterNote = isFiltered ? '<div class="kpi-filter-note">Filtered view</div>' : '';
 
-    let totalNetBenefit = 0, totalInvestment = 0, totalTimeSaved = 0;
-    let completed = 0, inProgress = 0, totalCostYr1 = 0, totalGrossBenefit = 0;
+    // Only Completed and In Progress count toward benefit KPIs
+    const completedProjects  = filtered.filter(p => p.status === 'Completed');
+    const inProgressProjects = filtered.filter(p => p.status === 'In Progress');
+    const onHoldProjects     = filtered.filter(p => p.status === 'On Hold');
 
-    viewActive.forEach(p => {
+    // Subscription annual cost drag (Option C)
+    const subsAnnualDrag = totalSubsAnnual();
+
+    // --- Realized benefit (Completed only) ---
+    let realizedBenefit = 0, realizedGross = 0, realizedCostYr1 = 0;
+    let realizedTimeSaved = 0, realizedInvestment = 0;
+    completedProjects.forEach(p => {
       const r = computeROI(p);
-      totalNetBenefit += r.netAnnualBenefit;
-      totalInvestment += r.investment;
-      totalGrossBenefit += r.grossAnnualBenefit;
-      totalCostYr1 += r.totalCostYr1;
-      totalTimeSaved += Number(p.time_saved_hrs_week) || 0;
-      if (p.status === 'Completed') completed++;
-      if (p.status === 'In Progress') inProgress++;
+      realizedBenefit  += r.netAnnualBenefit;
+      realizedGross    += r.grossAnnualBenefit;
+      realizedCostYr1  += r.totalCostYr1;
+      realizedTimeSaved  += Number(p.time_saved_hrs_week) || 0;
+      realizedInvestment += r.investment;
+    });
+    // Subtract proportional share of subscription drag
+    const totalCountForSplit = completedProjects.length + inProgressProjects.length;
+    const realizedSubsDrag   = totalCountForSplit > 0
+      ? subsAnnualDrag * (completedProjects.length / totalCountForSplit) : 0;
+    const realizedNet = realizedBenefit - realizedSubsDrag;
+
+    // --- Projected benefit (In Progress only) ---
+    let projectedBenefit = 0, projectedGross = 0, projectedCostYr1 = 0;
+    let projectedTimeSaved = 0, projectedInvestment = 0;
+    inProgressProjects.forEach(p => {
+      const r = computeROI(p);
+      projectedBenefit   += r.netAnnualBenefit;
+      projectedGross     += r.grossAnnualBenefit;
+      projectedCostYr1   += r.totalCostYr1;
+      projectedTimeSaved   += Number(p.time_saved_hrs_week) || 0;
+      projectedInvestment  += r.investment;
+    });
+    const projectedSubsDrag = totalCountForSplit > 0
+      ? subsAnnualDrag * (inProgressProjects.length / totalCountForSplit) : 0;
+    const projectedNet = projectedBenefit - projectedSubsDrag;
+
+    // --- On Hold cost drag ---
+    let onHoldOngoingCost = 0;
+    onHoldProjects.forEach(p => {
+      onHoldOngoingCost += (Number(p.monthly_cost) || 0) * 12;
     });
 
-    // Portfolio ROI % using the same corrected standard formula
-    const portfolioROIPct = totalCostYr1 > 0
-      ? ((totalGrossBenefit - totalCostYr1) / totalCostYr1) * 100
-      : 0;
+    // --- Portfolio ROI % (Completed + In Progress combined) ---
+    const combinedGross   = realizedGross + projectedGross;
+    const combinedCostYr1 = realizedCostYr1 + projectedCostYr1 + subsAnnualDrag;
+    const portfolioROIPct = combinedCostYr1 > 0
+      ? ((combinedGross - combinedCostYr1) / combinedCostYr1) * 100 : 0;
 
-    const filterNote = isFiltered
-      ? '<div class="kpi-filter-note">Filtered view</div>' : '';
+    // --- Time saved (Completed + In Progress) ---
+    const totalTimeSaved = realizedTimeSaved + projectedTimeSaved;
+
+    // --- Total investment (Completed + In Progress) ---
+    const totalInvestment = realizedInvestment + projectedInvestment;
+
+    // --- On Hold callout line ---
+    const onHoldCallout = onHoldProjects.length > 0
+      ? `<div class="kpi-sub" style="color:var(--amber-dark);font-weight:600;margin-top:6px;">
+           ⚠️ ${formatMoney(onHoldOngoingCost)}/yr ongoing from ${onHoldProjects.length} On Hold project${onHoldProjects.length===1?'':'s'}
+         </div>` : '';
+
+    // --- Subscription drag callout ---
+    const subsDragCallout = subsAnnualDrag > 0
+      ? `<div style="font-size:11px;color:var(--charcoal);margin-top:4px;">After ${formatMoney(subsAnnualDrag)}/yr shared subscription costs</div>`
+      : '';
 
     document.getElementById('kpis').innerHTML = `
       <div class="kpi">
         <div class="kpi-label">Projects${isFiltered ? ' (filtered)' : ''}</div>
-        <div class="kpi-value">${viewActive.length}</div>
-        <div class="kpi-sub">${inProgress} active · ${completed} completed</div>
+        <div class="kpi-value">${filtered.length}</div>
+        <div class="kpi-sub">${inProgressProjects.length} in progress · ${completedProjects.length} completed</div>
+        ${onHoldCallout}
         ${filterNote}
       </div>
       <div class="kpi">
-        <div class="kpi-label">Annual Net Benefit</div>
-        <div class="kpi-value">${formatMoney(totalNetBenefit)}</div>
-        <div class="kpi-sub">Gross benefit minus ongoing costs</div>
+        <div class="kpi-label">✅ Realized Benefit</div>
+        <div class="kpi-value" style="color:var(--green)">${formatMoney(realizedNet)}</div>
+        <div class="kpi-sub">${completedProjects.length} completed project${completedProjects.length===1?'':'s'} · annual net</div>
+        ${subsDragCallout}
+        ${filterNote}
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">🔄 Projected Benefit</div>
+        <div class="kpi-value">${formatMoney(projectedNet)}</div>
+        <div class="kpi-sub">${inProgressProjects.length} in-progress project${inProgressProjects.length===1?'':'s'} · annual net</div>
+        ${subsDragCallout}
         ${filterNote}
       </div>
       <div class="kpi">
         <div class="kpi-label">Total Investment</div>
         <div class="kpi-value">${formatMoney(totalInvestment)}</div>
-        <div class="kpi-sub">External + logged labor (fully-loaded)</div>
+        <div class="kpi-sub">Completed + In Progress · fully-loaded</div>
         ${filterNote}
       </div>
       <div class="kpi">
         <div class="kpi-label">Time Saved</div>
         <div class="kpi-value">${Math.round(totalTimeSaved)}<span class="unit"> hrs/wk</span></div>
-        <div class="kpi-sub">${Math.round(totalTimeSaved*52).toLocaleString()} hrs/yr</div>
+        <div class="kpi-sub">${Math.round(totalTimeSaved*52).toLocaleString()} hrs/yr · active projects</div>
         ${filterNote}
       </div>
       <div class="kpi">
         <div class="kpi-label">Portfolio ROI %</div>
         <div class="kpi-value">${portfolioROIPct > 0 ? '+' : ''}${Math.round(portfolioROIPct)}%</div>
-        <div class="kpi-sub">(Gross benefit − total Yr-1 cost) / total Yr-1 cost</div>
+        <div class="kpi-sub">Completed + In Progress · incl. subscription costs</div>
         ${filterNote}
       </div>
       <div class="kpi kpi-subs" onclick="openSubsModal()">
         <div class="kpi-label">AI Subscriptions</div>
         <div class="kpi-value">${formatMoney(totalSubsMonthly())}<span class="unit"> /mo</span></div>
-        <div class="kpi-sub">${activeSeatCount()} active seats · ${formatMoney(totalSubsAnnual())}/yr</div>
+        <div class="kpi-sub">${activeSeatCount()} active seats · ${formatMoney(subsAnnualDrag)}/yr</div>
       </div>
     `;
 
