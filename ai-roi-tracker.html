@@ -581,7 +581,7 @@
             </div>
             <div class="form-field">
               <label>Hourly Rate ($/hr)</label>
-              <input type="number" id="f_hourly_rate" min="0" step="5" value="75" oninput="updateComputed()">
+              <input type="number" id="f_hourly_rate" min="0" step="5" value="50" oninput="updateComputed()">
               <div class="hint">Base salary-equivalent rate for this project's team members.</div>
             </div>
             <div class="form-field">
@@ -1664,7 +1664,7 @@
     const p = project || {
       id: '', name: '', owner: '', status: 'Planning', phase: 'Discovery', priority: 'Medium',
       description: '', start_date: '', target_date: '', actual_date: '',
-      investment_cost: 0, monthly_cost: 0, hourly_rate: 75, fl_multiplier: 1.30,
+      investment_cost: 0, monthly_cost: 0, hourly_rate: 50, fl_multiplier: 1.30,
       time_saved_hrs_week: 0, cost_savings_annual: 0, revenue_annual: 0,
       productivity_gain_pct: 0, quality_notes: '', risks: '', dependencies: '', tags: ''
     };
@@ -1681,7 +1681,7 @@
     document.getElementById('f_actual_date').value = p.actual_date || '';
     document.getElementById('f_investment_cost').value = p.investment_cost || 0;
     document.getElementById('f_monthly_cost').value = p.monthly_cost || 0;
-    document.getElementById('f_hourly_rate').value = p.hourly_rate || 75;
+    document.getElementById('f_hourly_rate').value = p.hourly_rate || 50;
     document.getElementById('f_fl_multiplier').value = p.fl_multiplier || 1.30;
     document.getElementById('f_time_saved_hrs_week').value = p.time_saved_hrs_week || 0;
     document.getElementById('f_cost_savings_annual').value = p.cost_savings_annual || 0;
